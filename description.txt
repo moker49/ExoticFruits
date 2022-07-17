@@ -5,6 +5,7 @@ These fruits are craftable at a workbench with drops corresponding from each har
 == Release Notes ==
 v1.0.1
 - Updated internal names
+- Git initial commit
 
 v1.0
 - Initial release for Terraria 1.4
