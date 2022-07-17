@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\ManaFruit.csproj",
+      "projectUniqueName": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\ExoticFruits.csproj",
       "projectName": "ManaFruit",
-      "projectPath": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\ManaFruit.csproj",
+      "projectPath": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\ExoticFruits.csproj",
       "packagesPath": "C:\\Users\\Efren\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\obj\\",
       "projectStyle": "PackageReference",

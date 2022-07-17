@@ -11,8 +11,9 @@ namespace ExoticFruits.Items
 		public const int LifePerFruit = 10;
 		public const int ManaPerFruit = 10;
 
-		public override void SetStaticDefaults()
+		internal void SetStaticDefaultsBase(string displayName)
 		{
+			DisplayName.SetDefault(displayName);
 			Tooltip.SetDefault($"Increases maximum life by {LifePerFruit}\nIncreases maximum mana by {ManaPerFruit}\nOnly one can be consumed.");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
@@ -22,7 +23,11 @@ namespace ExoticFruits.Items
 			Item.CloneDefaults(ItemID.LifeFruit);
 		}
 
-		public void UseItemHelp(Player player)
+		internal bool CanUseItemBase(Player player, int fruitIndex)
+        {
+			return player.statLifeMax >= 400 && player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex] < MaxFruits;
+		}
+		internal bool UseItemBase(Player player, int fruitIndex)
 		{
 			player.statLifeMax2 += LifePerFruit;
 			player.statLife += LifePerFruit;
@@ -32,6 +37,8 @@ namespace ExoticFruits.Items
 			{
 				player.HealEffect(LifePerFruit);
 			}
+			player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex]++;
+			return true;
 		}
 	}
 }

@@ -7,19 +7,16 @@ namespace ExoticFruits.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Rambutan Fruit");
-			base.SetStaticDefaults();
+			base.SetStaticDefaultsBase("Rambutan Fruit");
 		}
 		public override bool CanUseItem(Player player)
 		{
-			return player.statLifeMax >= 400 && player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[8] < MaxFruits;
+			return base.CanUseItemBase(player, 8);
 		}
 
 		public override bool? UseItem(Player player)
 		{
-			base.UseItemHelp(player);
-            player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[8]++;
-			return true;
+			return base.UseItemBase(player, 8);
 		}
 
 		public override void AddRecipes()
