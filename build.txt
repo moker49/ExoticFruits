@@ -1,0 +1,3 @@
+displayName = Exotic Life Fruits
+author = Moker
+version = 1.0

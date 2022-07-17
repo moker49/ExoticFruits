@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "xy6y4c6kkDnAvYZbT92pwHmCY6n5qMdt7GpfJ7whEpXUEMb39S/JpRDmfoE+aO/JcU8X0326xQzqfTOcjgJyXQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\ManaFruit.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package tModLoader.CodeAssist. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "libraryId": "tModLoader.CodeAssist",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

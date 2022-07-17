@@ -1,0 +1,10 @@
+Adds 10 unique fruits that increase your maximum health and mana by 10.
+
+These fruits are craftable at a workbench with drops corresponding from each hardmode boss.
+
+== Release Notes ==
+v1.0.1
+- Updated internal names
+
+v1.0
+- Initial release for Terraria 1.4
