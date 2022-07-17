@@ -21,36 +21,34 @@ namespace ExoticFruits.Items
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
+			RecipeGroup fishronDrops = new(() => $"Any guaranteed {Lang.GetNPCName(NPCID.DukeFishron)} drop", new int[]
+			{
+				ItemID.Flairon,
+				ItemID.BubbleGun,
+				ItemID.RazorbladeTyphoon,
+				ItemID.TempestStaff,
+				ItemID.Tsunami
+			});
+
+			RecipeGroup.RegisterGroup("ExoticFruits:FishronItems", fishronDrops);
+			if (enableFruitRecipes)
+			{
+				CreateRecipe()
 				.AddIngredient(ItemID.LifeFruit)
 				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.Flairon)
+				.AddRecipeGroup(fishronDrops)
 				.AddTile(TileID.WorkBenches)
 				.Register();
-			CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
+			}
+			if (enableCrystalRecipes)
+			{
+				CreateRecipe()
+				.AddIngredient(ItemID.LifeCrystal)
 				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.BubbleGun)
+				.AddRecipeGroup(fishronDrops)
 				.AddTile(TileID.WorkBenches)
 				.Register();
-			CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
-				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.RazorbladeTyphoon)
-				.AddTile(TileID.WorkBenches)
-				.Register();
-			CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
-				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.TempestStaff)
-				.AddTile(TileID.WorkBenches)
-				.Register();
-			CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
-				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.Tsunami)
-				.AddTile(TileID.WorkBenches)
-				.Register();
+			}
 		}
 	}
 }

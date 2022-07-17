@@ -21,12 +21,24 @@ namespace ExoticFruits.Items
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
+			if (enableFruitRecipes)
+			{
+				CreateRecipe()
 				.AddIngredient(ItemID.LifeFruit)
 				.AddIngredient(ItemID.ManaCrystal)
 				.AddIngredient(ItemID.BeetleHusk, 4)
 				.AddTile(TileID.WorkBenches)
 				.Register();
+			}
+			if (enableCrystalRecipes)
+			{
+				CreateRecipe()
+				.AddIngredient(ItemID.LifeCrystal)
+				.AddIngredient(ItemID.ManaCrystal)
+				.AddIngredient(ItemID.BeetleHusk, 4)
+				.AddTile(TileID.WorkBenches)
+				.Register();
+			}
 		}
 	}
 }

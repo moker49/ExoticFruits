@@ -2,14 +2,19 @@ using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
+using ExoticFruits.Configs;
 
 namespace ExoticFruits.Items
 {
 	internal class ExoticFruitsItem : ModItem
 	{
-		public const int MaxFruits = 1;
-		public const int LifePerFruit = 10;
-		public const int ManaPerFruit = 10;
+        internal static int MaxFruits = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().maxFruits);
+        internal static int LifePerFruit = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().lifePerFruit);
+		internal static int ManaPerFruit = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().manaPerFruit);
+		internal static int LifeRequired = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().lifeRequired);
+		internal static int ManaRequired = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().manaRequired);
+		internal static bool enableFruitRecipes = ModContent.GetInstance<ExoticFruitsConfig>().enableFruitRecipes;
+		internal static bool enableCrystalRecipes = ModContent.GetInstance<ExoticFruitsConfig>().enableCrystalRecipes;
 
 		internal void SetStaticDefaultsBase(string displayName)
 		{
@@ -25,7 +30,7 @@ namespace ExoticFruits.Items
 
 		internal bool CanUseItemBase(Player player, int fruitIndex)
         {
-			return player.statLifeMax >= 400 && player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex] < MaxFruits;
+			return player.statLifeMax >= LifeRequired && player.statManaMax >= ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex] < MaxFruits;
 		}
 		internal bool UseItemBase(Player player, int fruitIndex)
 		{

@@ -21,30 +21,35 @@ namespace ExoticFruits.Items
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
+			RecipeGroup empressDrops = new(() => $"Any guaranteed {Lang.GetNPCName(NPCID.EmpressButterfly)} drop", new int[]
+			{
+				ItemID.FairyQueenMagicItem,
+				ItemID.PiercingStarlight,
+				ItemID.RainbowWhip,
+				ItemID.FairyQueenRangedItem
+			});
+
+			RecipeGroup.RegisterGroup("ExoticFruits:EmpressItems", empressDrops);
+
+			if (enableFruitRecipes)
+			{
+				CreateRecipe()
 				.AddIngredient(ItemID.LifeFruit)
 				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.FairyQueenMagicItem)
+				.AddRecipeGroup(empressDrops)
 				.AddTile(TileID.WorkBenches)
 				.Register();
-			CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
+			}
+			if (enableCrystalRecipes)
+			{
+				CreateRecipe()
+				.AddIngredient(ItemID.LifeCrystal)
 				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.PiercingStarlight)
+				.AddRecipeGroup(empressDrops)
 				.AddTile(TileID.WorkBenches)
 				.Register();
-			CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
-				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.RainbowWhip)
-				.AddTile(TileID.WorkBenches)
-				.Register();
-			CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
-				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.FairyQueenRangedItem)
-				.AddTile(TileID.WorkBenches)
-				.Register();
+
+			}
 		}
 	}
 }

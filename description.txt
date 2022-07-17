@@ -1,15 +1,22 @@
+[h1]Summary[/h1]
 Adds 10 unique fruits that increase your maximum life and mana by 10. They increase the maximum permanent life and mana to 600 and 300.
 
 These fruits are craftable at a workbench with drops corresponding from each hardmode boss. Check the image on the workshop for specific recipies.
 
 
-== Release Notes ==
-v1.0.2
+[h1]Release Notes[/h1]
+[b]v1.1[/b]
+- Made the mod quite configurable in the mod config
+- Added extra recipes with life crystals, toggleable in mod config
+- Streamlined a few recipes
 - Code cleanup
 
-v1.0.1
+[b]v1.0.2[/b]
+- Code cleanup
+
+[b]v1.0.1[/b]
 - Updated internal names
 - Git initial commit
 
-v1.0
-- Initial release for Terraria 1.4
+[b]v1.0[/b]
+- Initial release for tModLoader 1.4
