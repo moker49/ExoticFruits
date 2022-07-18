@@ -26,41 +26,52 @@ namespace ExoticFruits.Configs
 
 		[Label("Life Requirement")]
 		[Tooltip("Maximum Life Required To Consume Fruits")]
+		[Range(100, 500)]
+		[Increment(100)]
+		[DefaultValue(400)]
+		[Slider]
 		[DrawTicks]
-		[OptionStrings(new string[] { "50", "200", "400", "500" })]
-		[DefaultValue("400")]
-		public string lifeRequired;
+		[ReloadRequired]
+		public int lifeRequired;
 
 		[Label("Mana Requirement")]
 		[Tooltip("Maximum Mana Required To Consume Fruits")]
+		[Range(0, 200)]
+        [Increment(100)]
+		[DefaultValue(0)]
+		[Slider]
 		[DrawTicks]
-		[OptionStrings(new string[] { "0", "100", "200" })]
-		[DefaultValue("0")]
-		public string manaRequired;
+		[ReloadRequired]
+		public int manaRequired;
 
 
 		[Header("Stat Gain")]
 
 		[Label("Maximum Fruit Consumptions")]
 		[Tooltip("How many times can the same fruit be consumed")]
+		[Range(1, 4)]
+		[DefaultValue(1)]
+		[Slider]
 		[DrawTicks]
-		[OptionStrings(new string[] { "1", "2", "3", "4" })]
-		[DefaultValue("1")]
 		[ReloadRequired]
-		public string maxFruits;
+		public int maxFruits;
 
 		[Label("Life Gain Per Fruit")]
+		[Range(5, 25)]
+		[Increment(5)]
+		[DefaultValue(10)]
+		[Slider]
 		[DrawTicks]
-		[OptionStrings(new string[] { "5", "10", "15", "20", "25" })]
-		[DefaultValue("10")]
 		[ReloadRequired]
-		public string lifePerFruit;
+		public int lifePerFruit;
 
 		[Label("Mana Gain Per Fruit")]
+		[Range(5, 25)]
+		[Increment(5)]
+		[DefaultValue(10)]
+		[Slider]
 		[DrawTicks]
-		[OptionStrings(new string[] { "5", "10", "15", "20", "25" })]
-		[DefaultValue("10")]
 		[ReloadRequired]
-		public string manaPerFruit;
+		public int manaPerFruit;
 	}
 }

@@ -8,11 +8,11 @@ namespace ExoticFruits.Items
 {
 	internal class ExoticFruitsItem : ModItem
 	{
-        internal static int MaxFruits = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().maxFruits);
-        internal static int LifePerFruit = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().lifePerFruit);
-		internal static int ManaPerFruit = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().manaPerFruit);
-		internal static int LifeRequired = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().lifeRequired);
-		internal static int ManaRequired = int.Parse(ModContent.GetInstance<ExoticFruitsConfig>().manaRequired);
+        internal static int MaxFruits = ModContent.GetInstance<ExoticFruitsConfig>().maxFruits;
+        internal static int LifePerFruit = ModContent.GetInstance<ExoticFruitsConfig>().lifePerFruit;
+		internal static int ManaPerFruit = ModContent.GetInstance<ExoticFruitsConfig>().manaPerFruit;
+		internal static int LifeRequired = ModContent.GetInstance<ExoticFruitsConfig>().lifeRequired;
+		internal static int ManaRequired = ModContent.GetInstance<ExoticFruitsConfig>().manaRequired;
 		internal static bool enableFruitRecipes = ModContent.GetInstance<ExoticFruitsConfig>().enableFruitRecipes;
 		internal static bool enableCrystalRecipes = ModContent.GetInstance<ExoticFruitsConfig>().enableCrystalRecipes;
 

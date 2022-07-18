@@ -3,8 +3,12 @@ Adds 10 unique fruits that increase your maximum life and mana by 10. They incre
 
 These fruits are craftable at a workbench with drops corresponding from each hardmode boss. Check the image on the workshop for specific recipies.
 
+Very configurable in the mod config!
 
 [h1]Release Notes[/h1]
+[b]v1.1.1[/b]
+- Minor Fixes
+
 [b]v1.1[/b]
 - Made the mod quite configurable in the mod config
 - Added extra recipes with life crystals, toggleable in mod config
