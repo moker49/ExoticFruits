@@ -19,7 +19,7 @@ namespace ExoticFruits.Items
 		internal void SetStaticDefaultsBase(string displayName)
 		{
 			DisplayName.SetDefault(displayName);
-			Tooltip.SetDefault($"Increases maximum life by {LifePerFruit}\nIncreases maximum mana by {ManaPerFruit}\nOnly one can be consumed.");
+			Tooltip.SetDefault($"Increases maximum life by {LifePerFruit}.\nIncreases maximum mana by {ManaPerFruit}.\nOnly {MaxFruits} can be consumed");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 

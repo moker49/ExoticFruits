@@ -6,7 +6,7 @@ These fruits are craftable at a workbench with drops corresponding from each har
 Very configurable in the mod config!
 
 [h1]Release Notes[/h1]
-[b]v1.1.1[/b]
+[b]v1.1.1-2[/b]
 - Minor Fixes
 
 [b]v1.1[/b]

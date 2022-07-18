@@ -3,7 +3,7 @@ using Terraria.ID;
 
 namespace ExoticFruits.Items
 {
-	internal class ExoticFruitsEight : ExoticFruitsItem
+	internal class ExoticFruits7 : ExoticFruitsItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -21,7 +21,7 @@ namespace ExoticFruits.Items
 
 		public override void AddRecipes()
 		{
-			RecipeGroup empressDrops = new(() => $"Any guaranteed {Lang.GetNPCName(NPCID.EmpressButterfly)} drop", new int[]
+			RecipeGroup empressDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.HallowBoss)}", new int[]
 			{
 				ItemID.FairyQueenMagicItem,
 				ItemID.PiercingStarlight,

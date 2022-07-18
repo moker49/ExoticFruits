@@ -3,20 +3,20 @@ using Terraria.ID;
 
 namespace ExoticFruits.Items
 {
-	internal class ExoticFruitsTen : ExoticFruitsItem
+	internal class ExoticFruits5 : ExoticFruitsItem
 	{
 		public override void SetStaticDefaults()
 		{
-			base.SetStaticDefaultsBase("Mangosteen Fruit");
+			base.SetStaticDefaultsBase("Durian Fruit");
 		}
 		public override bool CanUseItem(Player player)
 		{
-			return base.CanUseItemBase(player, 9);
+			return base.CanUseItemBase(player, 5);
 		}
 
 		public override bool? UseItem(Player player)
 		{
-			return base.UseItemBase(player, 9);
+			return base.UseItemBase(player, 5);
 		}
 
 		public override void AddRecipes()
@@ -26,7 +26,7 @@ namespace ExoticFruits.Items
 				CreateRecipe()
 				.AddIngredient(ItemID.LifeFruit)
 				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.LunarBar, 10)
+				.AddIngredient(ItemID.BeetleHusk, 4)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 			}
@@ -35,7 +35,7 @@ namespace ExoticFruits.Items
 				CreateRecipe()
 				.AddIngredient(ItemID.LifeCrystal)
 				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.LunarBar, 10)
+				.AddIngredient(ItemID.BeetleHusk, 4)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 			}

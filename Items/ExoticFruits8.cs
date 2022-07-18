@@ -3,7 +3,7 @@ using Terraria.ID;
 
 namespace ExoticFruits.Items
 {
-	internal class ExoticFruitsNine : ExoticFruitsItem
+	internal class ExoticFruits8 : ExoticFruitsItem
 	{
 		public override void SetStaticDefaults()
 		{
