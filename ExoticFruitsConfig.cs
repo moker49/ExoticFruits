@@ -57,7 +57,7 @@ namespace ExoticFruits.Configs
 		public int maxFruits;
 
 		[Label("Life Gain Per Fruit")]
-		[Range(5, 25)]
+		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
 		[Slider]
@@ -66,7 +66,7 @@ namespace ExoticFruits.Configs
 		public int lifePerFruit;
 
 		[Label("Mana Gain Per Fruit")]
-		[Range(5, 25)]
+		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
 		[Slider]
