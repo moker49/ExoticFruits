@@ -15,6 +15,7 @@ namespace ExoticFruits.Items
         internal static int ManaRequired = ModContent.GetInstance<ExoticFruitsConfig>().manaRequired;
         internal static bool enableFruitRecipes = ModContent.GetInstance<ExoticFruitsConfig>().enableFruitRecipes;
         internal static bool enableCrystalRecipes = ModContent.GetInstance<ExoticFruitsConfig>().enableCrystalRecipes;
+        internal static bool FruitShardsEnabled = ModContent.GetInstance<ExoticFruitsConfig>().enableFruitShards;
 
         internal void SetStaticDefaultsBase(string displayName)
         {
@@ -44,6 +45,24 @@ namespace ExoticFruits.Items
             }
             player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex]++;
             return true;
+        }
+        internal void CreateFinalRecipe(int lifeCrystalOrFruit, int lastIngredient)
+        {
+            CreateRecipe()
+                    .AddIngredient(lifeCrystalOrFruit)
+                    .AddIngredient(ItemID.ManaCrystal)
+                    .AddIngredient(lastIngredient)
+                    .AddTile(TileID.WorkBenches)
+                    .Register();
+        }
+        internal void CreateFinalRecipe(int lifeCrystalOrFruit, RecipeGroup lastIngredient)
+        {
+            CreateRecipe()
+                    .AddIngredient(lifeCrystalOrFruit)
+                    .AddIngredient(ItemID.ManaCrystal)
+                    .AddRecipeGroup(lastIngredient)
+                    .AddTile(TileID.WorkBenches)
+                    .Register();
         }
     }
 }

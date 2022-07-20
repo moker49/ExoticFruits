@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace ExoticFruits.Items
 {
@@ -21,34 +22,40 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            RecipeGroup fishronDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.DukeFishron)}", new int[]
+            if (FruitShardsEnabled)
             {
-                ItemID.Flairon,
-                ItemID.BubbleGun,
-                ItemID.RazorbladeTyphoon,
-                ItemID.TempestStaff,
-                ItemID.Tsunami
-            });
-
-            RecipeGroup.RegisterGroup("ExoticFruits:FishronItems", fishronDrops);
-            if (enableFruitRecipes)
-            {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeFruit)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddRecipeGroup(fishronDrops)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+                if (enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard2>());
+                }
+                if (enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard2>());
+                }
             }
-            if (enableCrystalRecipes)
+            else
             {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeCrystal)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddRecipeGroup(fishronDrops)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+                RecipeGroup fishronDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.DukeFishron)}", new int[]
+                {
+                    ItemID.Flairon,
+                    ItemID.BubbleGun,
+                    ItemID.RazorbladeTyphoon,
+                    ItemID.TempestStaff,
+                    ItemID.Tsunami
+                });
+                RecipeGroup.RegisterGroup("ExoticFruits:FishronItems", fishronDrops);
+
+                if (enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, fishronDrops);
+
+                }
+                if (enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, fishronDrops);
+                }
             }
         }
+
     }
 }
