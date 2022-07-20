@@ -1,4 +1,3 @@
-using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
@@ -9,7 +8,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault($"{Lang.GetNPCName(NPCID.CultistBoss)} Fruit Essense");
+            DisplayName.SetDefault("Rambutan Fruit Essense");
             Tooltip.SetDefault($"Use this to make exotic fruits!");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
         }
