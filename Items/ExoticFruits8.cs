@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace ExoticFruits.Items
 {
@@ -21,24 +22,28 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            if (enableFruitRecipes)
+            if (FruitShardsEnabled)
             {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeFruit)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddIngredient(ItemID.LunarCraftingStation)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+                if (enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard3>(), DefaultAmount);
+                }
+                if (enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard3>(), DefaultAmount);
+                }
             }
-            if (enableCrystalRecipes)
+            else
             {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeCrystal)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddIngredient(ItemID.LunarCraftingStation)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+                if (enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.LunarCraftingStation, 1);
 
+                }
+                if (enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.LunarCraftingStation, 1);
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace ExoticFruits.Items
 {
@@ -21,34 +22,37 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            RecipeGroup empressDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.HallowBoss)}", new int[]
+            if (FruitShardsEnabled)
+            {
+                if (enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard2>(), DefaultAmount);
+                }
+                if (enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard2>(), DefaultAmount);
+                }
+            }
+            else
+            {
+                RecipeGroup empressDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.HallowBoss)}", new int[]
             {
                 ItemID.FairyQueenMagicItem,
                 ItemID.PiercingStarlight,
                 ItemID.RainbowWhip,
                 ItemID.FairyQueenRangedItem
             });
+                RecipeGroup.RegisterGroup("ExoticFruits:EmpressItems", empressDrops);
 
-            RecipeGroup.RegisterGroup("ExoticFruits:EmpressItems", empressDrops);
+                if (enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, empressDrops);
 
-            if (enableFruitRecipes)
-            {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeFruit)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddRecipeGroup(empressDrops)
-                .AddTile(TileID.WorkBenches)
-                .Register();
-            }
-            if (enableCrystalRecipes)
-            {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeCrystal)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddRecipeGroup(empressDrops)
-                .AddTile(TileID.WorkBenches)
-                .Register();
-
+                }
+                if (enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, empressDrops);
+                }
             }
         }
     }

@@ -23,22 +23,12 @@ namespace ExoticFruits.Items
         {
             if (enableFruitRecipes)
             {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeFruit)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddIngredient(ItemID.GelBalloon, 10)
-                .AddTile(TileID.WorkBenches)
-                .Register();
+                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.GelBalloon, DefaultAmount);
+
             }
             if (enableCrystalRecipes)
             {
-                CreateRecipe()
-                .AddIngredient(ItemID.LifeCrystal)
-                .AddIngredient(ItemID.ManaCrystal)
-                .AddIngredient(ItemID.GelBalloon, 10)
-                .AddTile(TileID.WorkBenches)
-                .Register();
-
+                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.GelBalloon, DefaultAmount);
             }
         }
     }
