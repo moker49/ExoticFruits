@@ -1,4 +1,5 @@
 using ExoticFruits.Configs;
+using ExoticFruits.Items;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -15,10 +16,21 @@ namespace ExoticFruits
             {
                 return;
             }
-            if (npc.type == NPCID.QueenSlimeBoss)
+            if (npc.type == NPCID.Plantera)
             {
-                // This is where we add item drop rules for VampireBat, here is a simple example:
-                npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 10, 15));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard0>(), 1, 10, 15));
+            }
+            else if(npc.type == NPCID.DukeFishron)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard1>(), 1, 10, 15));
+            }
+            else if (npc.type == NPCID.HallowBoss)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard2>(), 1, 10, 15));
+            }
+            else if (npc.type == NPCID.CultistBoss)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard3>(), 1, 10, 15));
             }
         }
     }
