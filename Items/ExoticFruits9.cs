@@ -3,42 +3,42 @@ using Terraria.ID;
 
 namespace ExoticFruits.Items
 {
-	internal class ExoticFruits9 : ExoticFruitsItem
-	{
-		public override void SetStaticDefaults()
-		{
-			base.SetStaticDefaultsBase("Mangosteen Fruit");
-		}
-		public override bool CanUseItem(Player player)
-		{
-			return base.CanUseItemBase(player, 9);
-		}
+    internal class ExoticFruits9 : ExoticFruitsFruit
+    {
+        public override void SetStaticDefaults()
+        {
+            base.SetStaticDefaultsBase("Mangosteen Fruit");
+        }
+        public override bool CanUseItem(Player player)
+        {
+            return base.CanUseItemBase(player, 9);
+        }
 
-		public override bool? UseItem(Player player)
-		{
-			return base.UseItemBase(player, 9);
-		}
+        public override bool? UseItem(Player player)
+        {
+            return base.UseItemBase(player, 9);
+        }
 
-		public override void AddRecipes()
-		{
-			if (enableFruitRecipes)
-			{
-				CreateRecipe()
-				.AddIngredient(ItemID.LifeFruit)
-				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.LunarBar, 10)
-				.AddTile(TileID.WorkBenches)
-				.Register();
-			}
-			if (enableCrystalRecipes)
-			{
-				CreateRecipe()
-				.AddIngredient(ItemID.LifeCrystal)
-				.AddIngredient(ItemID.ManaCrystal)
-				.AddIngredient(ItemID.LunarBar, 10)
-				.AddTile(TileID.WorkBenches)
-				.Register();
-			}
-		}
-	}
+        public override void AddRecipes()
+        {
+            if (enableFruitRecipes)
+            {
+                CreateRecipe()
+                .AddIngredient(ItemID.LifeFruit)
+                .AddIngredient(ItemID.ManaCrystal)
+                .AddIngredient(ItemID.LunarBar, 10)
+                .AddTile(TileID.WorkBenches)
+                .Register();
+            }
+            if (enableCrystalRecipes)
+            {
+                CreateRecipe()
+                .AddIngredient(ItemID.LifeCrystal)
+                .AddIngredient(ItemID.ManaCrystal)
+                .AddIngredient(ItemID.LunarBar, 10)
+                .AddTile(TileID.WorkBenches)
+                .Register();
+            }
+        }
+    }
 }
