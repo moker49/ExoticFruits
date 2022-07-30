@@ -22,34 +22,34 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            if (FruitShardsEnabled)
+            if (ExoticFruits.enableFruitShards)
             {
-                if (enableFruitRecipes)
+                if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard2>(), DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard2>(), ExoticFruits.DefaultAmount);
                 }
-                if (enableCrystalRecipes)
+                if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard2>(), DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard2>(), ExoticFruits.DefaultAmount);
                 }
             }
             else
             {
                 RecipeGroup empressDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.HallowBoss)}", new int[]
-            {
-                ItemID.FairyQueenMagicItem,
-                ItemID.PiercingStarlight,
-                ItemID.RainbowWhip,
-                ItemID.FairyQueenRangedItem
-            });
+                {
+                    ItemID.FairyQueenMagicItem,
+                    ItemID.PiercingStarlight,
+                    ItemID.RainbowWhip,
+                    ItemID.FairyQueenRangedItem
+                });
                 RecipeGroup.RegisterGroup("ExoticFruits:EmpressItems", empressDrops);
 
-                if (enableFruitRecipes)
+                if (ExoticFruits.enableFruitRecipes)
                 {
                     base.CreateFinalRecipe(ItemID.LifeFruit, empressDrops);
 
                 }
-                if (enableCrystalRecipes)
+                if (ExoticFruits.enableCrystalRecipes)
                 {
                     base.CreateFinalRecipe(ItemID.LifeCrystal, empressDrops);
                 }

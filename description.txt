@@ -1,11 +1,17 @@
 [h1]Summary[/h1]
-Adds 10 unique fruits that increase your maximum life and mana by 10. They increase the maximum permanent life and mana to 600 and 300.
+Adds 10 unique fruits that increase your maximum life and mana by 10. They increase the maximum permanent life and mana to 600 and 300. There's also an 11th extra delicious fruit.
 
-These fruits are craftable at a workbench with drops corresponding from each hardmode boss. Check the image on the workshop for specific recipies.
+These fruits are craftable with drops corresponding from each hardmode boss. Check the image on the workshop for specific recipies.
 
 Very configurable in the mod config!
 
 [h1]Release Notes[/h1]
+[b]v1.3[/b]
+- Updated the way most fruits look
+- Added an extra frutier fruit
+- Removed workbench requirement
+- Minor clean-ups
+
 [b]v1.2[/b]
 - Added a custom drop to bosses that dont drop ingredients
 - Added recipies with those drops. Configurable

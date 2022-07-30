@@ -21,12 +21,12 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            if (enableFruitRecipes)
+            if (ExoticFruits.enableFruitRecipes)
             {
                 base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.BeetleHusk, 4);
 
             }
-            if (enableCrystalRecipes)
+            if (ExoticFruits.enableCrystalRecipes)
             {
                 base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.BeetleHusk, 4);
             }

@@ -22,25 +22,25 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            if (FruitShardsEnabled)
+            if (ExoticFruits.enableFruitShards)
             {
-                if (enableFruitRecipes)
+                if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard0>(), DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
                 }
-                if (enableCrystalRecipes)
+                if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard0>(), DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
                 }
             }
             else
             {
-                if (enableFruitRecipes)
+                if (ExoticFruits.enableFruitRecipes)
                 {
                     base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.TempleKey, 1);
 
                 }
-                if (enableCrystalRecipes)
+                if (ExoticFruits.enableCrystalRecipes)
                 {
                     base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.TempleKey, 1);
                 }

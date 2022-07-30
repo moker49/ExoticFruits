@@ -22,15 +22,15 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            if (FruitShardsEnabled)
+            if (ExoticFruits.enableFruitShards)
             {
-                if (enableFruitRecipes)
+                if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard1>(), DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard1>(), ExoticFruits.DefaultAmount);
                 }
-                if (enableCrystalRecipes)
+                if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard1>(), DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard1>(), ExoticFruits.DefaultAmount);
                 }
             }
             else
@@ -45,12 +45,12 @@ namespace ExoticFruits.Items
                 });
                 RecipeGroup.RegisterGroup("ExoticFruits:FishronItems", fishronDrops);
 
-                if (enableFruitRecipes)
+                if (ExoticFruits.enableFruitRecipes)
                 {
                     base.CreateFinalRecipe(ItemID.LifeFruit, fishronDrops);
 
                 }
-                if (enableCrystalRecipes)
+                if (ExoticFruits.enableCrystalRecipes)
                 {
                     base.CreateFinalRecipe(ItemID.LifeCrystal, fishronDrops);
                 }

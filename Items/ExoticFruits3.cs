@@ -21,14 +21,14 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            if (enableFruitRecipes)
+            if (ExoticFruits.enableFruitRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.SoulofFright, DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.SoulofFright, ExoticFruits.DefaultAmount);
 
             }
-            if (enableCrystalRecipes)
+            if (ExoticFruits.enableCrystalRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.SoulofFright, DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.SoulofFright, ExoticFruits.DefaultAmount);
             }
         }
     }

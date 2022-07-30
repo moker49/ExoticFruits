@@ -1,12 +1,33 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "tModLoader.CodeAssist/0.1.5": {
+        "type": "package"
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "tModLoader.CodeAssist/0.1.5": {
+      "sha512": "Sg/jKEg/z5eN+Cdi3/9CU4JfJwvXHVH+UDJf4Lipo26uTa+guLLJXH1XDJNPShTFwKK8jMUYbthINP4QhsgHSA==",
+      "type": "package",
+      "path": "tmodloader.codeassist/0.1.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NugetIcon.png",
+        "analyzers/dotnet/cs/tModLoader.CodeAssist.dll",
+        "tmodloader.codeassist.0.1.5.nupkg.sha512",
+        "tmodloader.codeassist.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "tModLoader.CodeAssist >= 0.1.*"
+      "tModLoader.CodeAssist >= 0.1.5"
     ]
   },
   "packageFolders": {
@@ -16,7 +37,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\ExoticFruits.csproj",
-      "projectName": "ManaFruit",
+      "projectName": "ExoticFruits",
       "projectPath": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\ExoticFruits.csproj",
       "packagesPath": "C:\\Users\\Efren\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Efren\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\ExoticFruits\\obj\\",
@@ -29,7 +50,8 @@
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -49,7 +71,7 @@
         "dependencies": {
           "tModLoader.CodeAssist": {
             "target": "Package",
-            "version": "[0.1.*, )"
+            "version": "[0.1.5, )"
           }
         },
         "imports": [
@@ -70,16 +92,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package tModLoader.CodeAssist. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
-      "libraryId": "tModLoader.CodeAssist",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

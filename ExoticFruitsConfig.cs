@@ -9,14 +9,14 @@ namespace ExoticFruits.Configs
 
 		[Header("Recipes")]
 
-		[Label("Custom Boss Loot")]
-		[Tooltip("Bosses that don't drop crafting ingredients will now do so, for the fruits")]
+		[Label("Custom Boss Ingredients")]
+		[Tooltip("Bosses that don't drop crafting ingredients will now do so, for the fruits.\nDisabling this will force the player to use weapon drops from those bosses to make the fruits.")]
 		[DefaultValue(true)]
 		[ReloadRequired]
 		public bool enableFruitShards;
 
 		[Label("Life Fruit Recipes")]
-		[Tooltip("Enable recipes with Life Fruit")]
+		[Tooltip("Enable recipes with Life Fruits")]
 		[DefaultValue(true)]
 		[ReloadRequired]
 		public bool enableFruitRecipes;
