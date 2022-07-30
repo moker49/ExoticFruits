@@ -10,13 +10,13 @@ namespace ExoticFruits.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Goyave Noire");
-            Tooltip.SetDefault($"Sweet delicious nectar of your slain enemies.\nIncreases maximum life by {ExoticFruits.BigFruitValue}.\nIncreases maximum mana by {ExoticFruits.BigFruitValue}.\nOnly {ExoticFruits.MaxFruits} can be consumed.");
+            Tooltip.SetDefault($"The ultimate delicious nectar of the fallen gods.\nIncreases maximum life by {ExoticFruits.BigFruitValue}.\nIncreases maximum mana by {ExoticFruits.BigFruitValue}.\nOnly {ExoticFruits.MaxFruits} can be consumed.");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
         public override void SetDefaults()
         {
             Item.CloneDefaults(ItemID.LifeFruit);
-            Item.rare = ItemRarityID.Cyan;
+            Item.rare = ItemRarityID.Red;
         }
         internal bool CanUseItemBase(Player player, int fruitIndex)
         {
