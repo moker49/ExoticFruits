@@ -25,8 +25,8 @@ namespace ExoticFruits.Items
         }
         internal bool UseItemBase(Player player, int fruitIndex)
         {
-            BuffPlayer(player, ExoticFruits.BigFruitValue, ExoticFruits.BigFruitValue);
-            player.GetModPlayer<ExoticFruitsPlayer>().exoticFruitsBig++;
+            BuffPlayer(player, ExoticFruits.LifePerFruit, ExoticFruits.ManaPerFruit);
+            player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex]++;
             return true;
         }
         internal void BuffPlayer(Player player, int lifeAmount, int manaAmount)

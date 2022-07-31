@@ -20,7 +20,7 @@ namespace ExoticFruits.Items
         }
         internal bool CanUseItemBase(Player player, int fruitIndex)
         {
-            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().exoticFruitsBig < ExoticFruits.MaxFruits;
+            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().exoticFruitsBigFruit < ExoticFruits.MaxFruits;
         }
 
         public override bool? UseItem(Player player)
@@ -33,7 +33,7 @@ namespace ExoticFruits.Items
             {
                 player.HealEffect(ExoticFruits.BigFruitValue);
             }
-            player.GetModPlayer<ExoticFruitsPlayer>().exoticFruitsBig++;
+            player.GetModPlayer<ExoticFruitsPlayer>().exoticFruitsBigFruit++;
             return true;
         }
 

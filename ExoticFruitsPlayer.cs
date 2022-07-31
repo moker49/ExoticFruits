@@ -8,7 +8,7 @@ namespace ExoticFruits
     public class ExoticFruitsPlayer : ModPlayer
     {
         public byte[] exoticFruits = new byte[10];
-        public int exoticFruitsBig = 0;
+        public int exoticFruitsBigFruit = 0;
 
         public override void ResetEffects()
         {
@@ -17,8 +17,8 @@ namespace ExoticFruits
                 Player.statLifeMax2 += item * ExoticFruits.LifePerFruit;
                 Player.statManaMax2 += item * ExoticFruits.ManaPerFruit;
             }
-            Player.statLifeMax2 += exoticFruitsBig * ExoticFruits.BigFruitValue;
-            Player.statManaMax2 += exoticFruitsBig * ExoticFruits.BigFruitValue;
+            Player.statLifeMax2 += exoticFruitsBigFruit * ExoticFruits.BigFruitValue;
+            Player.statManaMax2 += exoticFruitsBigFruit * ExoticFruits.BigFruitValue;
         }
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
@@ -27,14 +27,14 @@ namespace ExoticFruits
             //packet.Write((byte)ExampleMod.MessageType.ExamplePlayerSyncPlayer);
             packet.Write((byte)Player.whoAmI);
             packet.Write(exoticFruits);
-            packet.Write(exoticFruitsBig);
+            packet.Write(exoticFruitsBigFruit);
             packet.Send(toWho, fromWho);
         }
 
         public override void SaveData(TagCompound tag)
         {
             tag["ExoticFruitss"] = exoticFruits;
-            tag["ExoticFruitsBig"] = exoticFruitsBig;
+            tag["exoticFruitsBigFruit"] = exoticFruitsBigFruit;
         }
 
         public override void LoadData(TagCompound tag)
@@ -42,7 +42,14 @@ namespace ExoticFruits
             try
             {
                 exoticFruits = (byte[])tag["ExoticFruitss"];
-                exoticFruitsBig = (int)tag["ExoticFruitsBig"];
+            }
+            catch (System.Exception)
+            {
+
+            }
+            try
+            {
+                exoticFruitsBigFruit = (int)tag["exoticFruitsBigFruit"];
             }
             catch (System.Exception)
             {
