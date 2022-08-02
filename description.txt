@@ -17,22 +17,11 @@ Very configurable in the mod config!
 - Added recipies with those drops. Configurable
 - Cleaned code
 
-[b]v1.1.1-3[/b]
-- Minor Fixes
-- Added more config options
-
 [b]v1.1[/b]
 - Made the mod quite configurable in the mod config
 - Added extra recipes with life crystals, toggleable in mod config
 - Streamlined a few recipes
 - Code cleanup
-
-[b]v1.0.2[/b]
-- Code cleanup
-
-[b]v1.0.1[/b]
-- Updated internal names
-- Git initial commit
 
 [b]v1.0[/b]
 - Initial release for tModLoader 1.4
