@@ -15,13 +15,13 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public bool enableFruitShards;
 
-		[Label("[id:1291] Life Fruit Recipes")]
+		[Label("[i:1291] Life Fruit Recipes")]
 		[Tooltip("Enable recipes with Life Fruits")]
 		[DefaultValue(true)]
 		[ReloadRequired]
 		public bool enableFruitRecipes;
 
-		[Label("[id:29] Life Crystal Recipes")]
+		[Label("[i:29] Life Crystal Recipes")]
 		[Tooltip("Enable recipes with Life Crystals")]
 		[DefaultValue(false)]
 		[ReloadRequired]
@@ -30,7 +30,7 @@ namespace ExoticFruits.Configs
 
 		[Header("Requirements")]
 
-		[Label("[id:58] Life Requirement")]
+		[Label("[i:58] Life Requirement")]
 		[Tooltip("Maximum Life Required To Consume Fruits")]
 		[Range(100, 500)]
 		[Increment(100)]
@@ -40,7 +40,7 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int lifeRequired;
 
-		[Label("[id:109] Mana Requirement")]
+		[Label("[i:109] Mana Requirement")]
 		[Tooltip("Maximum Mana Required To Consume Fruits")]
 		[Range(0, 200)]
         [Increment(100)]
@@ -53,7 +53,7 @@ namespace ExoticFruits.Configs
 
 		[Header("Stat Gain")]
 
-		[Label("[id:18] Maximum Fruit Consumptions")]
+		[Label("[i:18] Maximum Fruit Consumptions")]
 		[Tooltip("How many times can the same fruit be consumed")]
 		[Range(1, 4)]
 		[DefaultValue(1)]
@@ -62,7 +62,7 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int maxFruits;
 
-		[Label("[id:28] Life Gain Per Fruit")]
+		[Label("[i:28] Life Gain Per Fruit")]
 		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
@@ -71,7 +71,7 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int lifePerFruit;
 
-		[Label("[id:110] Mana Gain Per Fruit")]
+		[Label("[i:110] Mana Gain Per Fruit")]
 		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
