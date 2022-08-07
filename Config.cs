@@ -3,7 +3,7 @@ using Terraria.ModLoader.Config;
 
 namespace ExoticFruits.Configs
 {
-	public class ExoticFruitsConfig : ModConfig
+	public class Config : ModConfig
 	{
 		public override ConfigScope Mode => ConfigScope.ServerSide;
 

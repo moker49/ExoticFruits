@@ -7,9 +7,9 @@ using Terraria.ModLoader;
 
 namespace ExoticFruits
 {
-    public class ExoticFruitsNPC : GlobalNPC
+    public class ExoticFruitsGlobalNPC : GlobalNPC
     {
-        internal static bool FruitShardsEnabled = ModContent.GetInstance<ExoticFruitsConfig>().enableFruitShards;
+        internal static bool FruitShardsEnabled = ModContent.GetInstance<Config>().enableFruitShards;
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
             if (!FruitShardsEnabled)
