@@ -8,7 +8,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Rambutan Fruit");
+            base.SetStaticDefaultsBase("Rambutan Fruit", (string)Lang.GetNPCName(NPCID.CultistBoss));
         }
         public override bool CanUseItem(Player player)
         {

@@ -8,7 +8,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Pitaya Fruit");
+            base.SetStaticDefaultsBase("Pitaya Fruit", (string)Lang.GetNPCName(NPCID.Plantera));
         }
         public override bool CanUseItem(Player player)
         {

@@ -7,7 +7,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Mangosteen Fruit");
+            base.SetStaticDefaultsBase("Mangosteen Fruit", (string)Lang.GetNPCName(NPCID.MoonLordHead));
         }
         public override bool CanUseItem(Player player)
         {

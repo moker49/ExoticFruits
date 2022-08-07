@@ -7,7 +7,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Durian Fruit");
+            base.SetStaticDefaultsBase("Durian Fruit", (string)Lang.GetNPCName(NPCID.Golem));
         }
         public override bool CanUseItem(Player player)
         {

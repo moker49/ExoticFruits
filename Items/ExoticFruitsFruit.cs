@@ -7,10 +7,10 @@ namespace ExoticFruits.Items
 {
     internal class ExoticFruitsFruit : ModItem
     {
-        internal void SetStaticDefaultsBase(string displayName)
+        internal void SetStaticDefaultsBase(string displayName, string bossName)
         {
             DisplayName.SetDefault(displayName);
-            Tooltip.SetDefault($"Made from the essence of your slain enemies.\nIncreases maximum life by {ExoticFruits.LifePerFruit}.\nIncreases maximum mana by {ExoticFruits.ManaPerFruit}.\nOnly {ExoticFruits.MaxFruits} can be consumed.");
+            Tooltip.SetDefault($"Made from the life essence of {bossName}.\nIncreases maximum life by {ExoticFruits.LifePerFruit}.\nIncreases maximum mana by {ExoticFruits.ManaPerFruit}.\nOnly {ExoticFruits.MaxFruits} can be consumed.");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

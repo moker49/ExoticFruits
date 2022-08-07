@@ -8,7 +8,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Loquat Fruit");
+            base.SetStaticDefaultsBase("Loquat Fruit", (string)Lang.GetNPCName(NPCID.DukeFishron));
         }
         public override bool CanUseItem(Player player)
         {

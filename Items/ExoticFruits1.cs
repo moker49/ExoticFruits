@@ -7,7 +7,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Cherimoya Fruit");
+            base.SetStaticDefaultsBase("Cherimoya Fruit", "The Twins");
         }
         public override bool CanUseItem(Player player)
         {

@@ -7,7 +7,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Acai Fruit");
+            base.SetStaticDefaultsBase("Acai Fruit", (string)Lang.GetNPCName(NPCID.TheDestroyer));
         }
         public override bool CanUseItem(Player player)
         {

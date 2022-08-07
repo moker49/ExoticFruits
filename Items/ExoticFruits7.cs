@@ -8,7 +8,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Kiwano Fruit");
+            base.SetStaticDefaultsBase("Kiwano Fruit", (string)Lang.GetNPCName(NPCID.HallowBoss));
         }
         public override bool CanUseItem(Player player)
         {

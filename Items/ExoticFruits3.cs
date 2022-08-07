@@ -7,7 +7,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Jujube Fruit");
+            base.SetStaticDefaultsBase("Jujube Fruit", (string)Lang.GetNPCName(NPCID.SkeletronPrime));
         }
         public override bool CanUseItem(Player player)
         {

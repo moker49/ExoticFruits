@@ -7,7 +7,7 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Carambola Fruit");
+            base.SetStaticDefaultsBase("Carambola Fruit", (string)Lang.GetNPCName(NPCID.QueenSlimeBoss));
         }
         public override bool CanUseItem(Player player)
         {
