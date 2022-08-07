@@ -9,17 +9,11 @@ namespace ExoticFruits.Configs
 
 		[Header("Recipes")]
 
-		[Label("Custom Boss Ingredients")]
+		[Label("[i:1611] Custom Boss Ingredients")]
 		[Tooltip("Bosses that don't drop crafting ingredients will now do so, for the fruits.\nDisabling this will force the player to use weapon drops from those bosses to make the fruits.")]
 		[DefaultValue(true)]
 		[ReloadRequired]
 		public bool enableFruitShards;
-
-		[Label("[i:1291] Life Fruit Recipes")]
-		[Tooltip("Enable recipes with Life Fruits")]
-		[DefaultValue(true)]
-		[ReloadRequired]
-		public bool enableFruitRecipes;
 
 		[Label("[i:29] Life Crystal Recipes")]
 		[Tooltip("Enable recipes with Life Crystals")]
@@ -27,10 +21,16 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public bool enableCrystalRecipes;
 
+		[Label("[i:1291] Life Fruit Recipes")]
+		[Tooltip("Enable recipes with Life Fruits")]
+		[DefaultValue(true)]
+		[ReloadRequired]
+		public bool enableFruitRecipes;
+
 
 		[Header("Requirements")]
 
-		[Label("[i:58] Life Requirement")]
+		[Label("[i:29] Life Requirement")]
 		[Tooltip("Maximum Life Required To Consume Fruits")]
 		[Range(100, 500)]
 		[Increment(100)]
@@ -62,7 +62,7 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int maxFruits;
 
-		[Label("[i:28] Life Gain Per Fruit")]
+		[Label("[i:188] Life Gain Per Fruit")]
 		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
@@ -71,7 +71,7 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int lifePerFruit;
 
-		[Label("[i:110] Mana Gain Per Fruit")]
+		[Label("[i:189] Mana Gain Per Fruit")]
 		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
