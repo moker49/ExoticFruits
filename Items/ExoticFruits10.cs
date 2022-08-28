@@ -43,8 +43,8 @@ namespace ExoticFruits.Items
                     .AddIngredient(ModContent.ItemType<ExoticFruits9>())
                     .AddIngredient(ItemID.GlowingMushroom)
                     .AddIngredient(ItemID.Gel, 2)
-                    .AddIngredient(ItemID.LifeFruit, 5)
-                    .AddIngredient(ItemID.ManaCrystal, 5)
+                    .AddIngredient(ItemID.LifeFruit, 4)
+                    .AddIngredient(ItemID.ManaCrystal, 4)
                     .AddIngredient(ItemID.PixieDust, 3)
                     .Register();
         }
