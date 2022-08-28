@@ -24,7 +24,6 @@ namespace ExoticFruits.Items
             if (ExoticFruits.enableFruitRecipes)
             {
                 base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.LunarBar, ExoticFruits.DefaultAmount);
-
             }
             if (ExoticFruits.enableCrystalRecipes)
             {
