@@ -15,5 +15,7 @@ namespace ExoticFruits
         internal static bool enableFruitShards = ModContent.GetInstance<Config>().enableFruitShards;
         internal static int DefaultAmount = 10;
         internal static int BigFruitValue = 5 * LifePerFruit;
+        internal static int PotionDefenseValue = ModContent.GetInstance<Config>().potionDefenseValue;
+        internal static int PotionDefenseDuration = ModContent.GetInstance<Config>().potionDefenseDuration;
     }
 }

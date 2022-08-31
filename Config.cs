@@ -79,5 +79,22 @@ namespace ExoticFruits.Configs
 		[DrawTicks]
 		[ReloadRequired]
 		public int manaPerFruit;
+
+		[Label("[i:292] Defense Potion Strength")]
+		[Range(10, 120)]
+		[Increment(10)]
+		[DefaultValue(30)]
+		[Slider]
+		[ReloadRequired]
+		public int potionDefenseValue;
+
+		[Label("[i:17] Defense Potion Duration")]
+		[Tooltip("Duration in minutes")]
+		[Range(0, 480)]
+		[Increment(20)]
+		[DefaultValue(60)]
+		[Slider]
+		[ReloadRequired]
+		public int potionDefenseDuration;
 	}
 }
