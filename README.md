@@ -36,7 +36,7 @@ All default recepies are as follows: An ingredient dropped by each boss  + <img 
 
 ## Potion
 
-<img src="/Items/ExoticFruitsDefensePotion.png" width="32"> **Exoskin Potion** x10 : Recipe <img src="/Items/ExoticFruits10.png" width="16"> + <img src="https://terraria.wiki.gg/images/9/9f/Ironskin_Potion.png" height="24">x5 + <img src="https://terraria.wiki.gg/images/1/16/Bottled_Water.png" width="16">x5 + <img src="https://terraria.wiki.gg/images/1/19/Cursed_Flame.png" width="16"> + <img src="https://terraria.wiki.gg/images/7/77/Asphalt_Block.png" width="16">
+<img src="/Items/ExoticFruitsDefensePotion.png" height="32"> **Exoskin Potion** x10 : Recipe <img src="/Items/ExoticFruits10.png" width="16"> + <img src="https://terraria.wiki.gg/images/9/9f/Ironskin_Potion.png" height="24">x5 + <img src="https://terraria.wiki.gg/images/1/16/Bottled_Water.png" width="16">x5 + <img src="https://terraria.wiki.gg/images/1/19/Cursed_Flame.png" width="16"> + <img src="https://terraria.wiki.gg/images/7/77/Asphalt_Block.png" width="16">
 
 ## Mod Configuration
 
