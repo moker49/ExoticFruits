@@ -18,15 +18,15 @@ All default recepies are as follows: An ingredient dropped by each boss  + <img 
 
 <img src="/Items/ExoticFruits2.png" width="32"> **Acai** : Main ingredient <img src="https://terraria.wiki.gg/images/4/44/Soul_of_Might.gif" width="16"> dropped by The Destroyer.
 
-<img src="/Items/ExoticFruits3.png" width="32"> **Jujube** : Main ingredient <img src="https://terraria.wiki.gg/images/a/ad/Soul_of_Fright.gif" width="16"> dropped by Skeletop Prime.
+<img src="/Items/ExoticFruits3.png" width="32"> **Jujube** : Main ingredient <img src="https://terraria.wiki.gg/images/a/ad/Soul_of_Fright.gif" width="16"> dropped by Skeleton Prime.
 
 <img src="/Items/ExoticFruits4.png" width="32"> **Pitaya** : Main ingredient <img src="/Items/ExoticFruitsShard0.png" width="24"> dropped by Plantera.
 
 <img src="/Items/ExoticFruits5.png" width="32"> **Durian** : Main ingredient <img src = "https://terraria.wiki.gg/images/c/cb/Beetle_Husk.png" width="16"> dropped by The Golem.
 
-<img src="/Items/ExoticFruits6.png" width="32"> **Loquat** : Main ingredient <img src="/Items/ExoticFruitsShard1.png" width="24"> dropped by Empress Of Light.
+<img src="/Items/ExoticFruits6.png" width="32"> **Loquat** : Main ingredient <img src="/Items/ExoticFruitsShard1.png" width="24"> dropped by Duke Fishron.
 
-<img src="/Items/ExoticFruits7.png" width="32"> **Kiwano** : Main ingredient <img src="/Items/ExoticFruitsShard2.png" width="24"> dropped by Duke Fishron.
+<img src="/Items/ExoticFruits7.png" width="32"> **Kiwano** : Main ingredient <img src="/Items/ExoticFruitsShard2.png" width="24"> dropped by Empress Of Light.
 
 <img src="/Items/ExoticFruits8.png" width="32"> **Rambutan** : Main ingredient <img src="/Items/ExoticFruitsShard3.png" width="24"> dropped by Lunatic Cultist.
 
