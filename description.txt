@@ -1,6 +1,5 @@
 [h1]Summary[/h1]
-Adds 10 unique fruits. Each one increases your maximum life and mana by 10. They increase the maximum permanent life and mana to 600 and 300. There's also an 11th extra delicious fruit.
-Said fruit can also be used to make the Exoskin potion: A potion that increases defense by a large amount (configurable).
+Adds 10 unique fruits. Each one increases your maximum life and mana by 10. They increase the maximum permanent life and mana to 600 and 300. There's also an 11th extra delicious fruit. Said fruit can also be used to make the Exoskin potion: A potion that increases defense by a large amount (configurable).
 
 All default recepies are as follows: An ingredient dropped by each boss + Life Fruit + Mana Crystal
 
