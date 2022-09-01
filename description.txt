@@ -1,10 +1,11 @@
 [h1]Summary[/h1]
-Adds 10 unique fruits that increase your maximum life and mana by 10. They increase the maximum permanent life and mana to 600 and 300. There's also an 11th extra delicious fruit.
-You may consume the 11th fruit, but after that, you can use the 11th fruit to make a very strong defense potion.
+Adds 10 unique fruits. Each one increases your maximum life and mana by 10. They increase the maximum permanent life and mana to 600 and 300. There's also an 11th extra delicious fruit.
+Said fruit can also be used to make the Exoskin potion: A potion that increases defense by a large amount (configurable).
 
-These fruits are craftable with drops corresponding from each hardmode boss. Check the image on the workshop for specific recipies.
+All default recepies are as follows: An ingredient dropped by each boss + Life Fruit + Mana Crystal
 
-Very configurable in the mod config!
+The mod is very configurable!
+Check out [url=https://github.com/moker49/ExoticFruits]the repo[/url] for specific recipies and full details.
 
 [h1]Release Notes[/h1]
 [b]v1.4[/b]

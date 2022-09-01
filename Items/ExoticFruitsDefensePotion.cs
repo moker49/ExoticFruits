@@ -36,6 +36,7 @@ namespace ExoticFruits.Items
                     .AddIngredient(ItemID.BottledWater, 5)
                     .AddIngredient(ItemID.CursedFlame)
                     .AddIngredient(ItemID.AsphaltBlock)
+                    .AddTile(TileID.AlchemyTable)
                     .Register();
         }
     }
