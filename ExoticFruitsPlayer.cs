@@ -1,24 +1,24 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using ExoticFruits.Items;
+using System;
 
 namespace ExoticFruits
 {
     public class ExoticFruitsPlayer : ModPlayer
     {
-        public byte[] exoticFruits = new byte[10];
-        public int exoticFruitsBigFruit = 0;
-
+        public byte[] fruitsConsumed = new byte[10];
+        public int bigFruitsConsumed = 0;
         public override void ResetEffects()
         {
-            foreach (byte item in exoticFruits)
+            foreach (byte fruitsConsumed in fruitsConsumed)
             {
-                Player.statLifeMax2 += item * ExoticFruits.LifePerFruit;
-                Player.statManaMax2 += item * ExoticFruits.ManaPerFruit;
+                Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(fruitsConsumed, ExoticFruits.MaxFruits);
+                Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(fruitsConsumed, ExoticFruits.MaxFruits);
             }
-            Player.statLifeMax2 += exoticFruitsBigFruit * ExoticFruits.BigFruitValue;
-            Player.statManaMax2 += exoticFruitsBigFruit * ExoticFruits.BigFruitValue;
+            string name = Player.name;
+            Player.statLifeMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
+            Player.statManaMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
         }
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
@@ -26,22 +26,22 @@ namespace ExoticFruits
             ModPacket packet = Mod.GetPacket();
             //packet.Write((byte)ExampleMod.MessageType.ExamplePlayerSyncPlayer);
             packet.Write((byte)Player.whoAmI);
-            packet.Write(exoticFruits);
-            packet.Write(exoticFruitsBigFruit);
+            packet.Write(fruitsConsumed);
+            packet.Write(bigFruitsConsumed);
             packet.Send(toWho, fromWho);
         }
 
         public override void SaveData(TagCompound tag)
         {
-            tag["ExoticFruitss"] = exoticFruits;
-            tag["exoticFruitsBigFruit"] = exoticFruitsBigFruit;
+            tag["ExoticFruitss"] = fruitsConsumed;
+            tag["exoticFruitsBigFruit"] = bigFruitsConsumed;
         }
 
         public override void LoadData(TagCompound tag)
         {
             try
             {
-                exoticFruits = (byte[])tag["ExoticFruitss"];
+                fruitsConsumed = (byte[])tag["ExoticFruitss"];
             }
             catch (System.Exception)
             {
@@ -49,7 +49,7 @@ namespace ExoticFruits
             }
             try
             {
-                exoticFruitsBigFruit = (int)tag["exoticFruitsBigFruit"];
+                bigFruitsConsumed = (int)tag["exoticFruitsBigFruit"];
             }
             catch (System.Exception)
             {

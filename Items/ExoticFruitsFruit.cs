@@ -2,15 +2,21 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace ExoticFruits.Items
 {
-    internal class ExoticFruitsFruit : ModItem
+    internal abstract class ExoticFruitsFruit : ModItem
     {
         internal void SetStaticDefaultsBase(string displayName, string bossName)
         {
             DisplayName.SetDefault(displayName);
-            Tooltip.SetDefault($"Made from the life essence of {bossName}.\nIncreases maximum life by {ExoticFruits.LifePerFruit}.\nIncreases maximum mana by {ExoticFruits.ManaPerFruit}.\nOnly {ExoticFruits.MaxFruits} can be consumed.");
+            Tooltip.SetDefault($"Made from the life essence of {bossName}.\n" +
+                $"Increases maximum life by {ExoticFruits.LifePerFruit}.\n" +
+                $"Increases maximum mana by {ExoticFruits.ManaPerFruit}.\n" +
+                $"Consumed: ?/{ ExoticFruits.MaxFruits}");
+
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -21,12 +27,12 @@ namespace ExoticFruits.Items
 
         internal bool CanUseItemBase(Player player, int fruitIndex)
         {
-            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex] < ExoticFruits.MaxFruits;
+            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().fruitsConsumed[fruitIndex] < ExoticFruits.MaxFruits;
         }
         internal bool UseItemBase(Player player, int fruitIndex)
         {
             BuffPlayer(player, ExoticFruits.LifePerFruit, ExoticFruits.ManaPerFruit);
-            player.GetModPlayer<ExoticFruitsPlayer>().exoticFruits[fruitIndex]++;
+            player.GetModPlayer<ExoticFruitsPlayer>().fruitsConsumed[fruitIndex]++;
             return true;
         }
         internal void BuffPlayer(Player player, int lifeAmount, int manaAmount)
