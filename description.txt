@@ -7,6 +7,9 @@ The mod is very configurable!
 Check out [url=https://github.com/moker49/ExoticFruits]the repo[/url] for specific recipies and full details.
 
 [h1]Release Notes[/h1]
+[b]v1.4.4[/b]
+- Ported to tModLoader 1.4.4
+
 [b]v1.4[/b]
 - Added the 11th fruit
 - Added a potion made from said fruit that increases defense
