@@ -10,8 +10,6 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Exoskin Potion");
-            Tooltip.SetDefault($"Made from the blood of the fallen gods.\nIncreases armor by {ExoticFruits.PotionDefenseValue}.");
             ItemID.Sets.DrinkParticleColors[Type] = new Color[3] {
                 new Color(240, 240, 240),
                 new Color(200, 200, 200),

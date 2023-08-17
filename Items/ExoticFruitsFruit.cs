@@ -11,12 +11,6 @@ namespace ExoticFruits.Items
     {
         internal void SetStaticDefaultsBase(string displayName, string bossName)
         {
-            DisplayName.SetDefault(displayName);
-            Tooltip.SetDefault($"Made from the life essence of {bossName}.\n" +
-                $"Increases maximum life by {ExoticFruits.LifePerFruit}.\n" +
-                $"Increases maximum mana by {ExoticFruits.ManaPerFruit}.\n" +
-                $"Consumed: ?/{ ExoticFruits.MaxFruits}");
-
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

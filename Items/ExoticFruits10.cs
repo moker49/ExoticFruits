@@ -12,11 +12,8 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Goyave Noire");
-            Tooltip.SetDefault($"The ultimate delicious nectar of the fallen gods.\n" +
-                $"Increases maximum life by {ExoticFruits.BigFruitValue}.\n" +
-                $"Increases maximum mana by {ExoticFruits.BigFruitValue}.\n" +
-                $"Consumed: ?/{ExoticFruits.MaxFruits}");
+
+            
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -8,8 +8,6 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Loquat Fruit Essense");
-            Tooltip.SetDefault($"Use this to make exotic fruits!");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
         }
 
