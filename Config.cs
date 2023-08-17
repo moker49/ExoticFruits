@@ -9,20 +9,14 @@ namespace ExoticFruits.Configs
 
 		[Header("recipes")]
 
-		// [Label("[i:1611] Custom Boss Ingredients")]
-		// [Tooltip("Bosses that don't drop crafting ingredients will now do so, for the fruits.\nDisabling this will force the player to use weapon drops from those bosses to make the fruits.")]
 		[DefaultValue(true)]
 		[ReloadRequired]
 		public bool enableFruitShards;
 
-		// [Label("[i:29] Life Crystal Recipes")]
-		// [Tooltip("Enable recipes with Life Crystals")]
 		[DefaultValue(false)]
 		[ReloadRequired]
 		public bool enableCrystalRecipes;
 
-		// [Label("[i:1291] Life Fruit Recipes")]
-		// [Tooltip("Enable recipes with Life Fruits")]
 		[DefaultValue(true)]
 		[ReloadRequired]
 		public bool enableFruitRecipes;
@@ -30,8 +24,6 @@ namespace ExoticFruits.Configs
 
 		[Header("requirements")]
 
-		// [Label("[i:29] Life Requirement")]
-		// [Tooltip("Maximum Life Required To Consume Fruits")]
 		[Range(100, 500)]
 		[Increment(100)]
 		[DefaultValue(400)]
@@ -40,8 +32,6 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int lifeRequired;
 
-		// [Label("[i:109] Mana Requirement")]
-		// [Tooltip("Maximum Mana Required To Consume Fruits")]
 		[Range(0, 200)]
         [Increment(100)]
 		[DefaultValue(0)]
@@ -53,8 +43,6 @@ namespace ExoticFruits.Configs
 
 		[Header("stat_gain")]
 
-		// [Label("[i:18] Maximum Fruit Consumptions")]
-		// [Tooltip("How many times can the same fruit be consumed")]
 		[Range(1, 4)]
 		[DefaultValue(1)]
 		[Slider]
@@ -62,7 +50,6 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int maxFruits;
 
-		// [Label("[i:188] Life Gain Per Fruit")]
 		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
@@ -71,7 +58,6 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int lifePerFruit;
 
-		// [Label("[i:189] Mana Gain Per Fruit")]
 		[Range(0, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
@@ -80,7 +66,6 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int manaPerFruit;
 
-		// [Label("[i:292] Defense Potion Strength")]
 		[Range(10, 120)]
 		[Increment(10)]
 		[DefaultValue(30)]
@@ -88,8 +73,6 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int potionDefenseValue;
 
-		// [Label("[i:17] Defense Potion Duration")]
-		// [Tooltip("Duration in minutes")]
 		[Range(0, 480)]
 		[Increment(20)]
 		[DefaultValue(60)]

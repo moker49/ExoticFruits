@@ -164,60 +164,63 @@ Mods: {
 				DisplayName: Config
 
 				enableFruitShards: {
-					Label: enable Fruit Shards
-					Tooltip: ""
+					Label: "[i:1611] Custom Boss Ingredients"
+					Tooltip:
+						'''
+						Bosses that don't drop crafting ingredients will now do so, for the fruits.
+						Disabling this will force the player to use weapon drops from those bosses to make the fruits.
+						'''
 				}
 
 				enableCrystalRecipes: {
-					Label: enable Crystal Recipes
-					Tooltip: ""
+					Label: "[i:29] Life Crystal Recipes"
+					Tooltip: Enable recipes with Life Crystals
 				}
 
 				enableFruitRecipes: {
-					Label: enable Fruit Recipes
-					Tooltip: ""
+					Label: "[i:1291] Life Fruit Recipes"
+					Tooltip: Enable recipes with Life Fruits
 				}
 
 				lifeRequired: {
-					Label: life Required
-					Tooltip: ""
+					Label: "[i:29] Life Requirement"
+					Tooltip: Maximum Life Required To Consume Fruits
 				}
 
 				manaRequired: {
-					Label: mana Required
-					Tooltip: ""
+					Label: "[i:109] Mana Requirement"
+					Tooltip: Maximum Mana Required To Consume Fruits
 				}
 
 				maxFruits: {
-					Tooltip: ""
-					Label: max Fruits
+					Label: "[i:18] Maximum Fruit Consumptions"
+					Tooltip: How many times can the same fruit be consumed
 				}
 
 				lifePerFruit: {
-					Label: life Per Fruit
+					Label: "[i:188] Life Gain Per Fruit"
 					Tooltip: ""
 				}
 
 				manaPerFruit: {
-					Label: mana Per Fruit
+					Label: "[i:189] Mana Gain Per Fruit"
 					Tooltip: ""
 				}
 
 				potionDefenseValue: {
-					Label: potion Defense Value
+					Label: "[i:292] Defense Potion Strength"
 					Tooltip: ""
 				}
 
 				potionDefenseDuration: {
-					Label: potion Defense Duration
-					Tooltip: ""
+					Label: "[i:17] Defense Potion Duration"
+					Tooltip: Duration in minutes
 				}
 
 				Headers: {
-					Recipes: Recipes Header
-					recipes: recipes Header
-					requirements: requirements Header
-					stat_gain: stat_gain Header
+					recipes: Recipes
+					requirements: Requirements
+					stat_gain: Stat Gain
 				}
 			}
 		}
