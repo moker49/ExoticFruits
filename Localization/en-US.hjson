@@ -3,7 +3,7 @@ Mods: {
 		Buffs: {
 			ExoticFruitsDefenseBuff: {
 				DisplayName: Exoskin
-				Description: Increases defense by 30
+				Description: Major defense increase.
 			}
 		}
 
@@ -134,7 +134,7 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the blood of the fallen gods.
-					Increases armor by 30.
+					Increases defense by <defenseGain>.
 					'''
 			}
 

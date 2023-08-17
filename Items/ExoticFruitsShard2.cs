@@ -8,8 +8,6 @@ namespace ExoticFruits.Items
     {
         public override void SetStaticDefaults()
         {
-
-            
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
         }
 
