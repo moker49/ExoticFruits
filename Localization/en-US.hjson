@@ -1,4 +1,3 @@
-
 Mods: {
 	ExoticFruits: {
 		Buffs: {
@@ -157,6 +156,69 @@ Mods: {
 			ExoticFruitsShard3: {
 				DisplayName: Rambutan Fruit Essense
 				Tooltip: Use this to make exotic fruits!
+			}
+		}
+
+		Configs: {
+			Config: {
+				DisplayName: Config
+
+				enableFruitShards: {
+					Label: enable Fruit Shards
+					Tooltip: ""
+				}
+
+				enableCrystalRecipes: {
+					Label: enable Crystal Recipes
+					Tooltip: ""
+				}
+
+				enableFruitRecipes: {
+					Label: enable Fruit Recipes
+					Tooltip: ""
+				}
+
+				lifeRequired: {
+					Label: life Required
+					Tooltip: ""
+				}
+
+				manaRequired: {
+					Label: mana Required
+					Tooltip: ""
+				}
+
+				maxFruits: {
+					Tooltip: ""
+					Label: max Fruits
+				}
+
+				lifePerFruit: {
+					Label: life Per Fruit
+					Tooltip: ""
+				}
+
+				manaPerFruit: {
+					Label: mana Per Fruit
+					Tooltip: ""
+				}
+
+				potionDefenseValue: {
+					Label: potion Defense Value
+					Tooltip: ""
+				}
+
+				potionDefenseDuration: {
+					Label: potion Defense Duration
+					Tooltip: ""
+				}
+
+				Headers: {
+					Recipes: Recipes Header
+					recipes: recipes Header
+					requirements: requirements Header
+					stat_gain: stat_gain Header
+				}
 			}
 		}
 	}
