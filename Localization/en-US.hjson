@@ -13,9 +13,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Queen Slime.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -24,9 +24,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of The Twins.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -35,9 +35,9 @@ Mods: {
 				Tooltip:
 					'''
 					The ultimate delicious nectar of the fallen gods.
-					Increases maximum life by 50.
-					Increases maximum mana by 50.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -46,9 +46,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of The Destroyer.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -57,9 +57,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Skeletron Prime.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -68,9 +68,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Plantera.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -79,9 +79,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Golem.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -90,9 +90,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Duke Fishron.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -101,9 +101,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Empress of Light.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -112,9 +112,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Lunatic Cultist.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 
@@ -123,9 +123,9 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Moon Lord.
-					Increases maximum life by 10.
-					Increases maximum mana by 10.
-					Consumed: ?/1
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -8,10 +9,10 @@ namespace ExoticFruits.Items
 {
     internal class ExoticFruits2 : ExoticFruitsFruit
     {
-        private int fruitIndex = 2;
+        private readonly int fruitIndex = 2;
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaultsBase("Acai Fruit", (string)Lang.GetNPCName(NPCID.TheDestroyer));
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
         public override bool PreDrawTooltip(ReadOnlyCollection<TooltipLine> lines, ref int x, ref int y)
         {
@@ -25,16 +26,27 @@ namespace ExoticFruits.Items
             string capped = "";
             foreach (var line in tooltips)
             {
-                if (line.Text.Contains("Consumed:"))
+                string newLine = "";
+                int maxFruits = ExoticFruits.MaxFruits;
+                
+                if (line.Text.Contains("<consumed>"))
                 {
                     if (player.fruitsConsumed[fruitIndex] >= ExoticFruits.MaxFruits)
                     {
                         line.IsModifier = true;
-                        if (player.fruitsConsumed[fruitIndex] > ExoticFruits.MaxFruits) capped += $"(Effective: {ExoticFruits.MaxFruits})";
+                        if (player.fruitsConsumed[fruitIndex] > ExoticFruits.MaxFruits) capped += $" ({maxFruits}/{maxFruits})";
                     }
-                    line.Text = $"Consumed: {player.fruitsConsumed[fruitIndex]}/{ExoticFruits.MaxFruits} {capped}";
-                    break;
+                    newLine = line.Text.Replace("<consumed>", player.fruitsConsumed[fruitIndex].ToString());
+                    newLine = newLine.Replace("<cap>", maxFruits.ToString());
+                    newLine += capped;
+                } else if (line.Text.Contains("<lifeGain>")){
+                    newLine = line.Text.Replace("<lifeGain>", ExoticFruits.LifePerFruit.ToString());
+                } else if (line.Text.Contains("<manaGain>")){
+                    newLine = line.Text.Replace("<manaGain>", ExoticFruits.ManaPerFruit.ToString());
+                } else{
+                    continue;
                 }
+                line.Text = newLine;
             }
         }
         public override bool CanUseItem(Player player)

@@ -4,16 +4,12 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System;
 
 namespace ExoticFruits.Items
 {
     internal abstract class ExoticFruitsFruit : ModItem
     {
-        internal void SetStaticDefaultsBase(string displayName, string bossName)
-        {
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-        }
-
         public override void SetDefaults()
         {
             Item.CloneDefaults(ItemID.LifeFruit);
