@@ -35,7 +35,7 @@ namespace ExoticFruits.Items
                         line.IsModifier = true;
                         if (player.bigFruitsConsumed > ExoticFruits.MaxFruits) capped += $" ({maxFruits}/{maxFruits})";
                     }
-                    newLine = line.Text.Replace("<consumed>",player.bigFruitsConsumed .ToString());
+                    newLine = line.Text.Replace("<consumed>",player.bigFruitsConsumed.ToString());
                     newLine = newLine.Replace("<cap>", maxFruits.ToString());
                     newLine += capped;
                 } else if (line.Text.Contains("<lifeGain>")){

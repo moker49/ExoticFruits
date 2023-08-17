@@ -22,32 +22,7 @@ namespace ExoticFruits.Items
         }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            ExoticFruitsPlayer player = Main.player[Main.myPlayer].GetModPlayer<ExoticFruitsPlayer>();
-            string capped = "";
-            foreach (var line in tooltips)
-            {
-                string newLine = "";
-                int maxFruits = ExoticFruits.MaxFruits;
-                
-                if (line.Text.Contains("<consumed>"))
-                {
-                    if (player.fruitsConsumed[fruitIndex] >= ExoticFruits.MaxFruits)
-                    {
-                        line.IsModifier = true;
-                        if (player.fruitsConsumed[fruitIndex] > ExoticFruits.MaxFruits) capped += $" ({maxFruits}/{maxFruits})";
-                    }
-                    newLine = line.Text.Replace("<consumed>", player.fruitsConsumed[fruitIndex].ToString());
-                    newLine = newLine.Replace("<cap>", maxFruits.ToString());
-                    newLine += capped;
-                } else if (line.Text.Contains("<lifeGain>")){
-                    newLine = line.Text.Replace("<lifeGain>", ExoticFruits.LifePerFruit.ToString());
-                } else if (line.Text.Contains("<manaGain>")){
-                    newLine = line.Text.Replace("<manaGain>", ExoticFruits.ManaPerFruit.ToString());
-                } else{
-                    continue;
-                }
-                line.Text = newLine;
-            }
+            base.ModifyTooltipsFruit(fruitIndex, tooltips);
         }
         public override bool CanUseItem(Player player)
         {
