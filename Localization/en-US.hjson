@@ -192,38 +192,80 @@ Mods: {
 			}
 
 			ExoticFruits14: {
-				DisplayName: Exotic Fruits14
-				Tooltip: ""
+				DisplayName: Calamity Fruit 4
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
 			}
 
 			ExoticFruits15: {
-				DisplayName: Exotic Fruits15
-				Tooltip: ""
+				DisplayName: Calamity Fruit 5
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
 			}
 
 			ExoticFruits16: {
-				DisplayName: Exotic Fruits16
-				Tooltip: ""
+				DisplayName: Calamity Fruit 6
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
 			}
 
 			ExoticFruits17: {
-				DisplayName: Exotic Fruits17
-				Tooltip: ""
+				DisplayName: Calamity Fruit 7
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
 			}
 
 			ExoticFruits18: {
-				DisplayName: Exotic Fruits18
-				Tooltip: ""
+				DisplayName: Calamity Fruit 8
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
 			}
 
 			ExoticFruits19: {
-				DisplayName: Exotic Fruits19
-				Tooltip: ""
+				DisplayName: Calamity Fruit 9
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
 			}
 
 			ExoticFruits20: {
-				DisplayName: Exotic Fruits20
-				Tooltip: ""
+				DisplayName: Calamity Fruit 10
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
 			}
 		}
 
@@ -267,17 +309,35 @@ Mods: {
 
 				lifePerFruit: {
 					Label: "[i:188] Life Gain Per Fruit"
-					Tooltip: ""
+					Tooltip:
+						'''
+						Made from the life essence of Calamity.
+						Increases maximum life by <lifeGain>.
+						Increases maximum mana by <manaGain>.
+						Consumed: <consumed>/<cap>
+						'''
 				}
 
 				manaPerFruit: {
 					Label: "[i:189] Mana Gain Per Fruit"
-					Tooltip: ""
+					Tooltip:
+						'''
+						Made from the life essence of Calamity.
+						Increases maximum life by <lifeGain>.
+						Increases maximum mana by <manaGain>.
+						Consumed: <consumed>/<cap>
+						'''
 				}
 
 				potionDefenseValue: {
 					Label: "[i:292] Defense Potion Strength"
-					Tooltip: ""
+					Tooltip:
+						'''
+						Made from the life essence of Calamity.
+						Increases maximum life by <lifeGain>.
+						Increases maximum mana by <manaGain>.
+						Consumed: <consumed>/<cap>
+						'''
 				}
 
 				potionDefenseDuration: {

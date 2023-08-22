@@ -32,12 +32,12 @@ namespace ExoticFruits.Items.Fruits
                 {
                     if (player.bigFruitsConsumed < ExoticFruits.MaxFruits)
                     {
-                        line.OverrideColor = ExoticFruits.softCyan;
+                        line.OverrideColor = null;
+                        line.IsModifier = true;
                     }
                     else if (player.bigFruitsConsumed >= ExoticFruits.MaxFruits)
                     {
-                        line.OverrideColor = null;
-                        line.IsModifier = true;
+                        line.OverrideColor = ExoticFruits.softCyan;
                         if (player.bigFruitsConsumed > ExoticFruits.MaxFruits)
                         {
                             capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1

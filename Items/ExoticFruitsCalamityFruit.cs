@@ -46,12 +46,12 @@ namespace ExoticFruits.Items
                 {
                     if (player.calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits)
                     {
-                        line.OverrideColor = ExoticFruits.softCyan;
-                    }
-                    else if (player.calamityFruitsConsumed[calamityFruitIndex] >= ExoticFruits.MaxFruits)
-                    {
                         line.OverrideColor = null;
                         line.IsModifier = true;
+                    }
+                    else
+                    {
+                        line.OverrideColor = ExoticFruits.softCyan;
 
                         if (player.calamityFruitsConsumed[calamityFruitIndex] > ExoticFruits.MaxFruits)
                         {
@@ -59,6 +59,8 @@ namespace ExoticFruits.Items
                         }
                         if (!ExoticFruits.calamityLoaded)
                         {
+                            line.OverrideColor = null;
+                            line.IsModifier = true;
                             line.IsModifierBad = true;
                             capped += " > 0/0"; // Consumed: 2/1 > 0/0
                         }
