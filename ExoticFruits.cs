@@ -1,10 +1,11 @@
 using ExoticFruits.Configs;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace ExoticFruits
 {
-	public class ExoticFruits : Mod
-	{
+    public class ExoticFruits : Mod
+    {
         internal static int MaxFruits = ModContent.GetInstance<Config>().maxFruits;
         internal static int LifePerFruit = ModContent.GetInstance<Config>().lifePerFruit;
         internal static int ManaPerFruit = ModContent.GetInstance<Config>().manaPerFruit;
@@ -17,5 +18,9 @@ namespace ExoticFruits
         internal static int BigFruitValue = 5 * LifePerFruit;
         internal static int PotionDefenseValue = ModContent.GetInstance<Config>().potionDefenseValue;
         internal static int PotionDefenseDuration = ModContent.GetInstance<Config>().potionDefenseDuration;
+
+        internal static Color softCyan = new Color(100, 200, 230);
+
+        internal static bool calamityLoaded = ModLoader.TryGetMod("CalamityMod", out Mod calamityMod);
     }
 }

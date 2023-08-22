@@ -30,10 +30,7 @@ namespace ExoticFruits
 
         private bool loadCalamityFruitStats()
         {
-            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
-            {
-                return false;
-            }
+            if (!ExoticFruits.calamityLoaded) return false;
             foreach (byte calamityFruitConsumed in calamityFruitsConsumed)
             {
                 Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(calamityFruitConsumed, ExoticFruits.MaxFruits);

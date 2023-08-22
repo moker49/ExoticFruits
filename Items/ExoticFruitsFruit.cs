@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace ExoticFruits.Items
 {
@@ -41,22 +42,37 @@ namespace ExoticFruits.Items
             {
                 string newLine = "";
                 int maxFruits = ExoticFruits.MaxFruits;
-                
+
                 if (line.Text.Contains("<consumed>"))
                 {
-                    if (player.fruitsConsumed[fruitIndex] >= ExoticFruits.MaxFruits)
+                    if (player.fruitsConsumed[fruitIndex] < ExoticFruits.MaxFruits)
                     {
+                        line.OverrideColor = ExoticFruits.softCyan;
+                    }
+                    else if (player.fruitsConsumed[fruitIndex] >= ExoticFruits.MaxFruits)
+                    {
+                        line.OverrideColor = null;
                         line.IsModifier = true;
-                        if (player.fruitsConsumed[fruitIndex] > ExoticFruits.MaxFruits) capped += $" ({maxFruits}/{maxFruits})";
+                        if (player.fruitsConsumed[fruitIndex] > ExoticFruits.MaxFruits)
+                        {
+                            line.IsModifierBad = true;
+                            capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
+                        }
                     }
                     newLine = line.Text.Replace("<consumed>", player.fruitsConsumed[fruitIndex].ToString());
                     newLine = newLine.Replace("<cap>", maxFruits.ToString());
                     newLine += capped;
-                } else if (line.Text.Contains("<lifeGain>")){
+                }
+                else if (line.Text.Contains("<lifeGain>"))
+                {
                     newLine = line.Text.Replace("<lifeGain>", ExoticFruits.LifePerFruit.ToString());
-                } else if (line.Text.Contains("<manaGain>")){
+                }
+                else if (line.Text.Contains("<manaGain>"))
+                {
                     newLine = line.Text.Replace("<manaGain>", ExoticFruits.ManaPerFruit.ToString());
-                } else{
+                }
+                else
+                {
                     continue;
                 }
                 line.Text = newLine;
