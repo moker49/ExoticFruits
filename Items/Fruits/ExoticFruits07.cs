@@ -7,9 +7,9 @@ using Terraria.ModLoader;
 
 namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits8 : ExoticFruitsFruit
+    internal class ExoticFruits07 : ExoticFruitsFruit
     {
-        private readonly int fruitIndex = 8;
+        private readonly int fruitIndex = 7;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -40,23 +40,32 @@ namespace ExoticFruits.Items.Fruits
             {
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard3>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard2>(), ExoticFruits.DefaultAmount);
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard3>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard2>(), ExoticFruits.DefaultAmount);
                 }
             }
             else
             {
+                RecipeGroup empressDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.HallowBoss)}", new int[]
+                {
+                    ItemID.FairyQueenMagicItem,
+                    ItemID.PiercingStarlight,
+                    ItemID.RainbowWhip,
+                    ItemID.FairyQueenRangedItem
+                });
+                RecipeGroup.RegisterGroup("ExoticFruits:EmpressItems", empressDrops);
+
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.LunarCraftingStation, 1);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, empressDrops);
 
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.LunarCraftingStation, 1);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, empressDrops);
                 }
             }
         }

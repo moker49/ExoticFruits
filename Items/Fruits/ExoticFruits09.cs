@@ -7,9 +7,10 @@ using Terraria.ModLoader;
 
 namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits0 : ExoticFruitsFruit
+    internal class ExoticFruits09 : ExoticFruitsFruit
     {
-        private readonly int fruitIndex = 0;
+        private readonly int fruitIndex = 9;
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -38,11 +39,11 @@ namespace ExoticFruits.Items.Fruits
         {
             if (ExoticFruits.enableFruitRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.GelBalloon, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.LunarBar, ExoticFruits.DefaultAmount);
             }
             if (ExoticFruits.enableCrystalRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.GelBalloon, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.LunarBar, ExoticFruits.DefaultAmount);
             }
         }
     }

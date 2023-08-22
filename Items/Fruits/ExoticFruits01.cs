@@ -7,9 +7,9 @@ using Terraria.ModLoader;
 
 namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits2 : ExoticFruitsFruit
+    internal class ExoticFruits01 : ExoticFruitsFruit
     {
-        private readonly int fruitIndex = 2;
+        private readonly int fruitIndex = 1;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -38,12 +38,12 @@ namespace ExoticFruits.Items.Fruits
         {
             if (ExoticFruits.enableFruitRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.SoulofMight, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.SoulofSight, ExoticFruits.DefaultAmount);
 
             }
             if (ExoticFruits.enableCrystalRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.SoulofMight, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.SoulofSight, ExoticFruits.DefaultAmount);
             }
         }
     }

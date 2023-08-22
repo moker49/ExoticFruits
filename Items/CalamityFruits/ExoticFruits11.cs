@@ -5,11 +5,12 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExoticFruits.Items.Fruits
+namespace ExoticFruits.Items.CalamityFruits
 {
-    internal class ExoticFruits3 : ExoticFruitsFruit
+    internal class ExoticFruits11 : ExoticFruitsCalamityFruit
     {
-        private readonly int fruitIndex = 3;
+        private readonly int calamityFruitIndex = 0;
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -22,28 +23,31 @@ namespace ExoticFruits.Items.Fruits
         }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            base.ModifyTooltipsFruit(fruitIndex, tooltips);
+            base.ModifyTooltipsFruit(calamityFruitIndex, tooltips);
         }
         public override bool CanUseItem(Player player)
         {
-            return base.CanUseItemBase(player, fruitIndex);
+            return base.CanUseItemBase(player, calamityFruitIndex);
         }
 
         public override bool? UseItem(Player player)
         {
-            return base.UseItemBase(player, fruitIndex);
+            return base.UseItemBase(player, calamityFruitIndex);
         }
 
         public override void AddRecipes()
         {
+            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
+            {
+                return;
+            }
             if (ExoticFruits.enableFruitRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.SoulofFright, ExoticFruits.DefaultAmount);
-
+                base.CreateFinalRecipe(ItemID.LifeFruit, calamityMod.Find<ModItem>("IcyBullet").Type, ExoticFruits.DefaultAmount);
             }
             if (ExoticFruits.enableCrystalRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.SoulofFright, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeCrystal, calamityMod.Find<ModItem>("IcyBullet").Type, ExoticFruits.DefaultAmount);
             }
         }
     }

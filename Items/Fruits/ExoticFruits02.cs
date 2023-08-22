@@ -7,10 +7,9 @@ using Terraria.ModLoader;
 
 namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits11 : ExoticFruitsCalamityFruit
+    internal class ExoticFruits02 : ExoticFruitsFruit
     {
-        private readonly int calamityFruitIndex = 0;
-
+        private readonly int fruitIndex = 2;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -23,31 +22,28 @@ namespace ExoticFruits.Items.Fruits
         }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            base.ModifyTooltipsFruit(calamityFruitIndex, tooltips);
+            base.ModifyTooltipsFruit(fruitIndex, tooltips);
         }
         public override bool CanUseItem(Player player)
         {
-            return base.CanUseItemBase(player, calamityFruitIndex);
+            return base.CanUseItemBase(player, fruitIndex);
         }
 
         public override bool? UseItem(Player player)
         {
-            return base.UseItemBase(player, calamityFruitIndex);
+            return base.UseItemBase(player, fruitIndex);
         }
 
         public override void AddRecipes()
         {
-            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
-            {
-                return;
-            }
             if (ExoticFruits.enableFruitRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, calamityMod.Find<ModItem>("IcyBullet").Type, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.SoulofMight, ExoticFruits.DefaultAmount);
+
             }
             if (ExoticFruits.enableCrystalRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, calamityMod.Find<ModItem>("IcyBullet").Type, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.SoulofMight, ExoticFruits.DefaultAmount);
             }
         }
     }

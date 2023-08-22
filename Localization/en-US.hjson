@@ -8,11 +8,110 @@ Mods: {
 		}
 
 		Items: {
-			ExoticFruits0: {
+			ExoticFruits00: {
 				DisplayName: Carambola Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Queen Slime.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits01: {
+				DisplayName: Cherimoya Fruit
+				Tooltip:
+					'''
+					Made from the life essence of The Twins.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits02: {
+				DisplayName: Acai Fruit
+				Tooltip:
+					'''
+					Made from the life essence of The Destroyer.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits03: {
+				DisplayName: Jujube Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Skeletron Prime.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits04: {
+				DisplayName: Pitaya Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Plantera.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits05: {
+				DisplayName: Durian Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Golem.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits06: {
+				DisplayName: Loquat Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Duke Fishron.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits07: {
+				DisplayName: Kiwano Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Empress of Light.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits08: {
+				DisplayName: Rambutan Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Lunatic Cultist.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits09: {
+				DisplayName: Mangosteen Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Moon Lord.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -24,105 +123,6 @@ Mods: {
 				Tooltip:
 					'''
 					The ultimate delicious nectar of the fallen gods.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits1: {
-				DisplayName: Cherimoya Fruit
-				Tooltip:
-					'''
-					Made from the life essence of The Twins.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits2: {
-				DisplayName: Acai Fruit
-				Tooltip:
-					'''
-					Made from the life essence of The Destroyer.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits3: {
-				DisplayName: Jujube Fruit
-				Tooltip:
-					'''
-					Made from the life essence of Skeletron Prime.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits4: {
-				DisplayName: Pitaya Fruit
-				Tooltip:
-					'''
-					Made from the life essence of Plantera.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits5: {
-				DisplayName: Durian Fruit
-				Tooltip:
-					'''
-					Made from the life essence of Golem.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits6: {
-				DisplayName: Loquat Fruit
-				Tooltip:
-					'''
-					Made from the life essence of Duke Fishron.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits7: {
-				DisplayName: Kiwano Fruit
-				Tooltip:
-					'''
-					Made from the life essence of Empress of Light.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits8: {
-				DisplayName: Rambutan Fruit
-				Tooltip:
-					'''
-					Made from the life essence of Lunatic Cultist.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
-			ExoticFruits9: {
-				DisplayName: Mangosteen Fruit
-				Tooltip:
-					'''
-					Made from the life essence of Moon Lord.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>

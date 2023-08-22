@@ -7,9 +7,9 @@ using Terraria.ModLoader;
 
 namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits6 : ExoticFruitsFruit
+    internal class ExoticFruits04 : ExoticFruitsFruit
     {
-        private readonly int fruitIndex = 6;
+        private readonly int fruitIndex = 4;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -40,36 +40,25 @@ namespace ExoticFruits.Items.Fruits
             {
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard1>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard1>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
                 }
             }
             else
             {
-                RecipeGroup fishronDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.DukeFishron)}", new int[]
-                {
-                    ItemID.Flairon,
-                    ItemID.BubbleGun,
-                    ItemID.RazorbladeTyphoon,
-                    ItemID.TempestStaff,
-                    ItemID.Tsunami
-                });
-                RecipeGroup.RegisterGroup("ExoticFruits:FishronItems", fishronDrops);
-
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, fishronDrops);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.TempleKey, 1);
 
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, fishronDrops);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.TempleKey, 1);
                 }
             }
         }
-
     }
 }
