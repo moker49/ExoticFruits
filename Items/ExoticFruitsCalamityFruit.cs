@@ -55,7 +55,6 @@ namespace ExoticFruits.Items
 
                         if (player.calamityFruitsConsumed[calamityFruitIndex] > ExoticFruits.MaxFruits)
                         {
-                            line.IsModifierBad = true;
                             capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
                         }
                         if (!ExoticFruits.calamityLoaded)

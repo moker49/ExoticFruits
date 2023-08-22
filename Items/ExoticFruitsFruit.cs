@@ -55,7 +55,6 @@ namespace ExoticFruits.Items
                         line.IsModifier = true;
                         if (player.fruitsConsumed[fruitIndex] > ExoticFruits.MaxFruits)
                         {
-                            line.IsModifierBad = true;
                             capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
                         }
                     }

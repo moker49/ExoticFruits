@@ -27,22 +27,36 @@ namespace ExoticFruits.Items.Fruits
             {
                 string newLine = "";
                 int maxFruits = ExoticFruits.MaxFruits;
-                
+
                 if (line.Text.Contains("<consumed>"))
                 {
-                    if (player.bigFruitsConsumed >= ExoticFruits.MaxFruits)
+                    if (player.bigFruitsConsumed < ExoticFruits.MaxFruits)
                     {
-                        line.IsModifier = true;
-                        if (player.bigFruitsConsumed > ExoticFruits.MaxFruits) capped += $" ({maxFruits}/{maxFruits})";
+                        line.OverrideColor = ExoticFruits.softCyan;
                     }
-                    newLine = line.Text.Replace("<consumed>",player.bigFruitsConsumed.ToString());
+                    else if (player.bigFruitsConsumed >= ExoticFruits.MaxFruits)
+                    {
+                        line.OverrideColor = null;
+                        line.IsModifier = true;
+                        if (player.bigFruitsConsumed > ExoticFruits.MaxFruits)
+                        {
+                            capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
+                        }
+                    }
+                    newLine = line.Text.Replace("<consumed>", player.bigFruitsConsumed.ToString());
                     newLine = newLine.Replace("<cap>", maxFruits.ToString());
                     newLine += capped;
-                } else if (line.Text.Contains("<lifeGain>")){
+                }
+                else if (line.Text.Contains("<lifeGain>"))
+                {
                     newLine = line.Text.Replace("<lifeGain>", ExoticFruits.BigFruitValue.ToString());
-                } else if (line.Text.Contains("<manaGain>")){
+                }
+                else if (line.Text.Contains("<manaGain>"))
+                {
                     newLine = line.Text.Replace("<manaGain>", ExoticFruits.BigFruitValue.ToString());
-                } else{
+                }
+                else
+                {
                     continue;
                 }
                 line.Text = newLine;
@@ -75,7 +89,7 @@ namespace ExoticFruits.Items.Fruits
         public override void AddRecipes()
         {
             CreateRecipe()
-                    .AddIngredient(ModContent.ItemType<ExoticFruits9>())
+                    .AddIngredient(ModContent.ItemType<ExoticFruits09>())
                     .AddIngredient(ItemID.GlowingMushroom)
                     .AddIngredient(ItemID.Gel, 2)
                     .AddIngredient(ItemID.LifeFruit, 4)
