@@ -31,7 +31,22 @@ namespace ExoticFruits
             else if (item.type == ItemID.CultistBossBag)
             {
                 itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard3>(), 1, 10, 15));
-            }   
+            }
+
+            // Calamity();
+
+        }
+
+        private bool Calamity()
+        {
+            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
+            {
+                return false;
+            }
+
+
+
+            return true;
         }
     }
 }

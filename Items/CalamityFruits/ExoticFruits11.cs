@@ -43,11 +43,11 @@ namespace ExoticFruits.Items.CalamityFruits
             }
             if (ExoticFruits.enableFruitRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, calamityMod.Find<ModItem>("IcyBullet").Type, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeFruit, calamityMod.Find<ModItem>("ProfanedCore").Type, 1);
             }
             if (ExoticFruits.enableCrystalRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, calamityMod.Find<ModItem>("IcyBullet").Type, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeCrystal, calamityMod.Find<ModItem>("ProfanedCore").Type, 1);
             }
         }
     }

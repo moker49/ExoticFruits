@@ -21,14 +21,14 @@ namespace ExoticFruits
             }
 
             // calamity fruits
-            loadCalamityFruitStats();
+            LoadCalamityFruitStats();
 
             string name = Player.name;
             Player.statLifeMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
             Player.statManaMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
         }
 
-        private bool loadCalamityFruitStats()
+        private bool LoadCalamityFruitStats()
         {
             if (!ExoticFruits.calamityLoaded) return false;
             foreach (byte calamityFruitConsumed in calamityFruitsConsumed)

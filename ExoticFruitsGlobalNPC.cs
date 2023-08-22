@@ -1,4 +1,6 @@
+using System;
 using ExoticFruits.Configs;
+using ExoticFruits.Items;
 using ExoticFruits.Items.Shards;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
@@ -20,7 +22,7 @@ namespace ExoticFruits
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard0>(), 1, 10, 15));
             }
-            else if(npc.type == NPCID.DukeFishron)
+            else if (npc.type == NPCID.DukeFishron)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard1>(), 1, 10, 15));
             }
@@ -32,6 +34,20 @@ namespace ExoticFruits
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard3>(), 1, 10, 15));
             }
+
+            // Calamity();
+        }
+
+        private bool Calamity()
+        {
+            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
+            {
+                return false;
+            }
+
+
+
+            return true;
         }
     }
 }
