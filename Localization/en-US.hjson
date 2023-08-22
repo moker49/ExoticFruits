@@ -129,17 +129,6 @@ Mods: {
 					'''
 			}
 
-			ExoticFruits11: {
-				DisplayName: Calamity Fruit 1
-				Tooltip:
-					'''
-					Made from the life essence of Calamity.
-					Increases maximum life by <lifeGain>.
-					Increases maximum mana by <manaGain>.
-					Consumed: <consumed>/<cap>
-					'''
-			}
-
 			ExoticFruitsDefensePotion: {
 				DisplayName: Exoskin Potion
 				Tooltip:
@@ -167,6 +156,74 @@ Mods: {
 			ExoticFruitsShard3: {
 				DisplayName: Rambutan Fruit Essense
 				Tooltip: Use this to make exotic fruits!
+			}
+
+			ExoticFruits11: {
+				DisplayName: Calamity Fruit 1
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits12: {
+				DisplayName: Calamity Fruit 2
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits13: {
+				DisplayName: Calamity Fruit 3
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits14: {
+				DisplayName: Exotic Fruits14
+				Tooltip: ""
+			}
+
+			ExoticFruits15: {
+				DisplayName: Exotic Fruits15
+				Tooltip: ""
+			}
+
+			ExoticFruits16: {
+				DisplayName: Exotic Fruits16
+				Tooltip: ""
+			}
+
+			ExoticFruits17: {
+				DisplayName: Exotic Fruits17
+				Tooltip: ""
+			}
+
+			ExoticFruits18: {
+				DisplayName: Exotic Fruits18
+				Tooltip: ""
+			}
+
+			ExoticFruits19: {
+				DisplayName: Exotic Fruits19
+				Tooltip: ""
+			}
+
+			ExoticFruits20: {
+				DisplayName: Exotic Fruits20
+				Tooltip: ""
 			}
 		}
 
