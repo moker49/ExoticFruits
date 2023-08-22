@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using System;
+using System.Collections.Generic;
 
 namespace ExoticFruits
 {
@@ -13,17 +14,32 @@ namespace ExoticFruits
         public override void ResetEffects()
         {
             // vanilla fruits
-            foreach (byte fruitsConsumed in fruitsConsumed)
+            foreach (byte fruitConsumed in fruitsConsumed)
             {
-                Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(fruitsConsumed, ExoticFruits.MaxFruits);
-                Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(fruitsConsumed, ExoticFruits.MaxFruits);
+                Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(fruitConsumed, ExoticFruits.MaxFruits);
+                Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(fruitConsumed, ExoticFruits.MaxFruits);
             }
+
+            // calamity fruits
+            loadCalamityFruitStats();
+
             string name = Player.name;
             Player.statLifeMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
             Player.statManaMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
+        }
 
-            //calamity fruits
-
+        private bool loadCalamityFruitStats()
+        {
+            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
+            {
+                return false;
+            }
+            foreach (byte calamityFruitConsumed in calamityFruitsConsumed)
+            {
+                Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(calamityFruitConsumed, ExoticFruits.MaxFruits);
+                Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(calamityFruitConsumed, ExoticFruits.MaxFruits);
+            }
+            return true;
         }
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
@@ -54,7 +70,7 @@ namespace ExoticFruits
             {
 
             }
-                        try
+            try
             {
                 calamityFruitsConsumed = (byte[])tag["ExoticFruitssCalamity"];
             }

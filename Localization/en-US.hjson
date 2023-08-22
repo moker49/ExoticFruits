@@ -19,22 +19,22 @@ Mods: {
 					'''
 			}
 
-			ExoticFruits1: {
-				DisplayName: Cherimoya Fruit
+			ExoticFruits10: {
+				DisplayName: Goyave Noire
 				Tooltip:
 					'''
-					Made from the life essence of The Twins.
+					The ultimate delicious nectar of the fallen gods.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
 			}
 
-			ExoticFruits10: {
-				DisplayName: Goyave Noire
+			ExoticFruits1: {
+				DisplayName: Cherimoya Fruit
 				Tooltip:
 					'''
-					The ultimate delicious nectar of the fallen gods.
+					Made from the life essence of The Twins.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -123,6 +123,17 @@ Mods: {
 				Tooltip:
 					'''
 					Made from the life essence of Moon Lord.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits11: {
+				DisplayName: Calamity Fruit 1
+				Tooltip:
+					'''
+					Made from the life essence of Calamity.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
