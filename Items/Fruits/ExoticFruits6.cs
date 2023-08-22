@@ -5,11 +5,11 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExoticFruits.Items
+namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits7 : ExoticFruitsFruit
+    internal class ExoticFruits6 : ExoticFruitsFruit
     {
-        private readonly int fruitIndex = 7;
+        private readonly int fruitIndex = 6;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -40,34 +40,36 @@ namespace ExoticFruits.Items
             {
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard2>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard1>(), ExoticFruits.DefaultAmount);
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard2>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard1>(), ExoticFruits.DefaultAmount);
                 }
             }
             else
             {
-                RecipeGroup empressDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.HallowBoss)}", new int[]
+                RecipeGroup fishronDrops = new(() => $"Any Weapon Drop From {Lang.GetNPCName(NPCID.DukeFishron)}", new int[]
                 {
-                    ItemID.FairyQueenMagicItem,
-                    ItemID.PiercingStarlight,
-                    ItemID.RainbowWhip,
-                    ItemID.FairyQueenRangedItem
+                    ItemID.Flairon,
+                    ItemID.BubbleGun,
+                    ItemID.RazorbladeTyphoon,
+                    ItemID.TempestStaff,
+                    ItemID.Tsunami
                 });
-                RecipeGroup.RegisterGroup("ExoticFruits:EmpressItems", empressDrops);
+                RecipeGroup.RegisterGroup("ExoticFruits:FishronItems", fishronDrops);
 
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, empressDrops);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, fishronDrops);
 
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, empressDrops);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, fishronDrops);
                 }
             }
         }
+
     }
 }

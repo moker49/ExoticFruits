@@ -5,11 +5,11 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExoticFruits.Items
+namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits4 : ExoticFruitsFruit
+    internal class ExoticFruits8 : ExoticFruitsFruit
     {
-        private readonly int fruitIndex = 4;
+        private readonly int fruitIndex = 8;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -40,23 +40,23 @@ namespace ExoticFruits.Items
             {
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Items.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard3>(), ExoticFruits.DefaultAmount);
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Items.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard3>(), ExoticFruits.DefaultAmount);
                 }
             }
             else
             {
                 if (ExoticFruits.enableFruitRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.TempleKey, 1);
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.LunarCraftingStation, 1);
 
                 }
                 if (ExoticFruits.enableCrystalRecipes)
                 {
-                    base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.TempleKey, 1);
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.LunarCraftingStation, 1);
                 }
             }
         }

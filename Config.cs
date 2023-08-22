@@ -50,7 +50,7 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int maxFruits;
 
-		[Range(0, 25)]
+		[Range(5, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
 		[Slider]
@@ -58,7 +58,7 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int lifePerFruit;
 
-		[Range(0, 25)]
+		[Range(5, 25)]
 		[Increment(5)]
 		[DefaultValue(10)]
 		[Slider]
@@ -66,14 +66,14 @@ namespace ExoticFruits.Configs
 		[ReloadRequired]
 		public int manaPerFruit;
 
-		[Range(10, 120)]
+		[Range(10, 150)]
 		[Increment(10)]
 		[DefaultValue(30)]
 		[Slider]
 		[ReloadRequired]
 		public int potionDefenseValue;
 
-		[Range(0, 480)]
+		[Range(20, 480)]
 		[Increment(20)]
 		[DefaultValue(60)]
 		[Slider]

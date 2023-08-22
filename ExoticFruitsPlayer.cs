@@ -8,9 +8,11 @@ namespace ExoticFruits
     public class ExoticFruitsPlayer : ModPlayer
     {
         public byte[] fruitsConsumed = new byte[10];
+        public byte[] calamityFruitsConsumed = new byte[10];
         public int bigFruitsConsumed = 0;
         public override void ResetEffects()
         {
+            // vanilla fruits
             foreach (byte fruitsConsumed in fruitsConsumed)
             {
                 Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(fruitsConsumed, ExoticFruits.MaxFruits);
@@ -19,6 +21,9 @@ namespace ExoticFruits
             string name = Player.name;
             Player.statLifeMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
             Player.statManaMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
+
+            //calamity fruits
+
         }
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
@@ -27,6 +32,7 @@ namespace ExoticFruits
             //packet.Write((byte)ExampleMod.MessageType.ExamplePlayerSyncPlayer);
             packet.Write((byte)Player.whoAmI);
             packet.Write(fruitsConsumed);
+            packet.Write(calamityFruitsConsumed);
             packet.Write(bigFruitsConsumed);
             packet.Send(toWho, fromWho);
         }
@@ -34,6 +40,7 @@ namespace ExoticFruits
         public override void SaveData(TagCompound tag)
         {
             tag["ExoticFruitss"] = fruitsConsumed;
+            tag["ExoticFruitssCalamity"] = calamityFruitsConsumed;
             tag["exoticFruitsBigFruit"] = bigFruitsConsumed;
         }
 
@@ -42,6 +49,14 @@ namespace ExoticFruits
             try
             {
                 fruitsConsumed = (byte[])tag["ExoticFruitss"];
+            }
+            catch (System.Exception)
+            {
+
+            }
+                        try
+            {
+                calamityFruitsConsumed = (byte[])tag["ExoticFruitssCalamity"];
             }
             catch (System.Exception)
             {

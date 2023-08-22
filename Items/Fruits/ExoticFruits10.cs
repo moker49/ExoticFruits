@@ -5,7 +5,7 @@ using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace ExoticFruits.Items
+namespace ExoticFruits.Items.Fruits
 {
     internal class ExoticFruits10 : ModItem
     {

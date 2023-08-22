@@ -45,7 +45,7 @@ namespace ExoticFruits.Items
         public override void AddRecipes()
         {
             CreateRecipe(10)
-                    .AddIngredient(ModContent.ItemType<ExoticFruits10>())
+                    .AddIngredient(ModContent.ItemType<Fruits.ExoticFruits10>())
                     .AddIngredient(ItemID.IronskinPotion, 5)
                     .AddIngredient(ItemID.BottledWater, 5)
                     .AddIngredient(ItemID.CursedFlame)

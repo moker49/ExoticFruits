@@ -1,5 +1,5 @@
 using ExoticFruits.Configs;
-using ExoticFruits.Items;
+using ExoticFruits.Items.Shards;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;

@@ -1,10 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System;
 
 namespace ExoticFruits.Items
 {

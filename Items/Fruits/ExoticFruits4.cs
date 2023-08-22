@@ -5,11 +5,11 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExoticFruits.Items
+namespace ExoticFruits.Items.Fruits
 {
-    internal class ExoticFruits3 : ExoticFruitsFruit
+    internal class ExoticFruits4 : ExoticFruitsFruit
     {
-        private readonly int fruitIndex = 3;
+        private readonly int fruitIndex = 4;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -36,14 +36,28 @@ namespace ExoticFruits.Items
 
         public override void AddRecipes()
         {
-            if (ExoticFruits.enableFruitRecipes)
+            if (ExoticFruits.enableFruitShards)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.SoulofFright, ExoticFruits.DefaultAmount);
-
+                if (ExoticFruits.enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
+                }
+                if (ExoticFruits.enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard0>(), ExoticFruits.DefaultAmount);
+                }
             }
-            if (ExoticFruits.enableCrystalRecipes)
+            else
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.SoulofFright, ExoticFruits.DefaultAmount);
+                if (ExoticFruits.enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.TempleKey, 1);
+
+                }
+                if (ExoticFruits.enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.TempleKey, 1);
+                }
             }
         }
     }

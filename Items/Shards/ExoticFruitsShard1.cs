@@ -2,9 +2,9 @@ using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
-namespace ExoticFruits.Items
+namespace ExoticFruits.Items.Shards
 {
-    internal class ExoticFruitsShard0 : ModItem
+    internal class ExoticFruitsShard1 : ModItem
     {
         public override void SetStaticDefaults()
         {
