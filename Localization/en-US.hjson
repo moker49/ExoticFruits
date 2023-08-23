@@ -9,7 +9,7 @@ Mods: {
 
 		Items: {
 			ExoticFruits00: {
-				DisplayName: Carambola Fruit
+				DisplayName: Pindil Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Queen Slime.
@@ -20,7 +20,7 @@ Mods: {
 			}
 
 			ExoticFruits01: {
-				DisplayName: Cherimoya Fruit
+				DisplayName: Kadevan Fruit
 				Tooltip:
 					'''
 					Made from the life essence of The Twins.
@@ -31,7 +31,7 @@ Mods: {
 			}
 
 			ExoticFruits02: {
-				DisplayName: Acai Fruit
+				DisplayName: Zitallah Fruit
 				Tooltip:
 					'''
 					Made from the life essence of The Destroyer.
@@ -42,7 +42,7 @@ Mods: {
 			}
 
 			ExoticFruits03: {
-				DisplayName: Jujube Fruit
+				DisplayName: Undil Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Skeletron Prime.
@@ -53,7 +53,7 @@ Mods: {
 			}
 
 			ExoticFruits04: {
-				DisplayName: Pitaya Fruit
+				DisplayName: Iraepeli Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Plantera.
@@ -64,7 +64,7 @@ Mods: {
 			}
 
 			ExoticFruits05: {
-				DisplayName: Durian Fruit
+				DisplayName: Jabryn Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Golem.
@@ -75,7 +75,7 @@ Mods: {
 			}
 
 			ExoticFruits06: {
-				DisplayName: Loquat Fruit
+				DisplayName: Xangra Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Duke Fishron.
@@ -86,7 +86,7 @@ Mods: {
 			}
 
 			ExoticFruits07: {
-				DisplayName: Kiwano Fruit
+				DisplayName: Ocyn Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Empress of Light.
@@ -97,7 +97,7 @@ Mods: {
 			}
 
 			ExoticFruits08: {
-				DisplayName: Rambutan Fruit
+				DisplayName: Tupaldi Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Lunatic Cultist.
@@ -108,7 +108,7 @@ Mods: {
 			}
 
 			ExoticFruits09: {
-				DisplayName: Mangosteen Fruit
+				DisplayName: Olu Fruit
 				Tooltip:
 					'''
 					Made from the life essence of Moon Lord.
@@ -119,7 +119,7 @@ Mods: {
 			}
 
 			ExoticFruits10: {
-				DisplayName: Goyave Noire
+				DisplayName: Xadori Fruit
 				Tooltip:
 					'''
 					The ultimate delicious nectar of the fallen gods.
@@ -139,30 +139,30 @@ Mods: {
 			}
 
 			ExoticFruitsShard0: {
-				DisplayName: Pitaya Fruit Essense
+				DisplayName: Iraepeli Fruit Essense
 				Tooltip: Use this to make exotic fruits!
 			}
 
 			ExoticFruitsShard1: {
-				DisplayName: Loquat Fruit Essense
+				DisplayName: Xangra Fruit Essense
 				Tooltip: Use this to make exotic fruits!
 			}
 
 			ExoticFruitsShard2: {
-				DisplayName: Kiwano Fruit Essense
+				DisplayName: Ocyn Fruit Essense
 				Tooltip: Use this to make exotic fruits!
 			}
 
 			ExoticFruitsShard3: {
-				DisplayName: Rambutan Fruit Essense
+				DisplayName: Tupaldi Fruit Essense
 				Tooltip: Use this to make exotic fruits!
 			}
 
 			ExoticFruits11: {
-				DisplayName: Calamity Fruit 1
+				DisplayName: Epiuni Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of The Profaned Guardians.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -170,10 +170,10 @@ Mods: {
 			}
 
 			ExoticFruits12: {
-				DisplayName: Calamity Fruit 2
+				DisplayName: Oblicus Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of Dragonfolly.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -181,10 +181,10 @@ Mods: {
 			}
 
 			ExoticFruits13: {
-				DisplayName: Calamity Fruit 3
+				DisplayName: Luntim Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of Providence.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -192,10 +192,10 @@ Mods: {
 			}
 
 			ExoticFruits14: {
-				DisplayName: Calamity Fruit 4
+				DisplayName: Trochlo Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of Storm Weaver.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -203,10 +203,10 @@ Mods: {
 			}
 
 			ExoticFruits15: {
-				DisplayName: Calamity Fruit 5
+				DisplayName: Baharub Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of Ceaseless Void.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -214,10 +214,10 @@ Mods: {
 			}
 
 			ExoticFruits16: {
-				DisplayName: Calamity Fruit 6
+				DisplayName: Lirasat Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of Signus.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -225,10 +225,10 @@ Mods: {
 			}
 
 			ExoticFruits17: {
-				DisplayName: Calamity Fruit 7
+				DisplayName: Makitish Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of Polterghast.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -236,10 +236,10 @@ Mods: {
 			}
 
 			ExoticFruits18: {
-				DisplayName: Calamity Fruit 8
+				DisplayName: Koroxilis Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of The Old Duke.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -247,10 +247,10 @@ Mods: {
 			}
 
 			ExoticFruits19: {
-				DisplayName: Calamity Fruit 9
+				DisplayName: Figgensul Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of The Devourer of Gods.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
@@ -258,10 +258,10 @@ Mods: {
 			}
 
 			ExoticFruits20: {
-				DisplayName: Calamity Fruit 10
+				DisplayName: Volormorc Fruit
 				Tooltip:
 					'''
-					Made from the life essence of Calamity.
+					Made from the life essence of Yharon.
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
