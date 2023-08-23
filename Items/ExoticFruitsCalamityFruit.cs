@@ -44,7 +44,14 @@ namespace ExoticFruits.Items
 
                 if (line.Text.Contains("<consumed>"))
                 {
-                    if (player.calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits)
+                    if (!ExoticFruits.calamityLoaded)
+                    {
+                        line.OverrideColor = null;
+                        line.IsModifier = true;
+                        line.IsModifierBad = true;
+                        capped += $" > 0/{maxFruits}"; // Consumed: 2/1 > 0/0
+                    }
+                    else if (player.calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits)
                     {
                         line.OverrideColor = null;
                         line.IsModifier = true;
@@ -57,13 +64,7 @@ namespace ExoticFruits.Items
                         {
                             capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
                         }
-                        if (!ExoticFruits.calamityLoaded)
-                        {
-                            line.OverrideColor = null;
-                            line.IsModifier = true;
-                            line.IsModifierBad = true;
-                            capped += " > 0/0"; // Consumed: 2/1 > 0/0
-                        }
+
                     }
                     newLine = line.Text.Replace("<consumed>", player.calamityFruitsConsumed[calamityFruitIndex].ToString());
                     newLine = newLine.Replace("<cap>", maxFruits.ToString());
