@@ -13,7 +13,7 @@ namespace ExoticFruits.Items.Shards
 
         public override void SetDefaults()
         {
-            Item.CloneDefaults(ItemID.SoulofFlight);
+            Item.CloneDefaults(ItemID.LifeFruit);
         }
     }
 }
