@@ -21,6 +21,7 @@ namespace ExoticFruits
             if (npc.type == NPCID.Plantera)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard0>(), 1, 10, 15));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LifeFruitShard>(), 1, 4, 4));
             }
             else if (npc.type == NPCID.DukeFishron)
             {

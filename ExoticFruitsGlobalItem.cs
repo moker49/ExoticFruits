@@ -19,6 +19,7 @@ namespace ExoticFruits
             if (item.type == ItemID.PlanteraBossBag)
             {
                 itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard0>(), 1, 10, 15));
+                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<LifeFruitShard>(), 1, 4, 4));
             }
             else if (item.type == ItemID.FishronBossBag)
             {
@@ -35,6 +36,14 @@ namespace ExoticFruits
 
             // Calamity();
 
+        }
+
+
+        public override void AddRecipes()
+        {
+            Recipe recipe = Recipe.Create(ItemID.LifeFruit);
+            recipe.AddIngredient(ModContent.ItemType<LifeFruitShard>(), 2);
+            recipe.Register();
         }
 
         private bool Calamity()

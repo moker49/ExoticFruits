@@ -267,6 +267,11 @@ Mods: {
 					Consumed: <consumed>/<cap>
 					'''
 			}
+
+			LifeFruitShard: {
+				DisplayName: Fruit Chunk
+				Tooltip: "This could be tasty."
+			}
 		}
 
 		Configs: {
