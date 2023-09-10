@@ -90,10 +90,8 @@ namespace ExoticFruits.Items.Fruits
         {
             CreateRecipe()
                     .AddIngredient(ModContent.ItemType<ExoticFruits09>())
-                    .AddIngredient(ItemID.GlowingMushroom)
-                    .AddIngredient(ItemID.Gel, 2)
-                    .AddIngredient(ItemID.LifeFruit, 4)
-                    .AddIngredient(ItemID.ManaCrystal, 4)
+                    .AddIngredient(ItemID.AegisCrystal, 4)
+                    .AddIngredient(ItemID.ArcaneCrystal, 4)
                     .AddIngredient(ItemID.PixieDust, 3)
                     .Register();
         }
