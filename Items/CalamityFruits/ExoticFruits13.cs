@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace ExoticFruits.Items.CalamityFruits
 {
-    internal class ExoticFruits12 : ExoticFruitsCalamityFruit
+    internal class ExoticFruits13 : ExoticFruitsCalamityFruit
     {
         private readonly int calamityFruitIndex = 2;
 
