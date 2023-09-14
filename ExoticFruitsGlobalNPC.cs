@@ -50,7 +50,7 @@ namespace ExoticFruits
             }
             else if (npc.type == calamityMod.Find<ModNPC>("ProfanedGuardianCommander").Type)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard4>(), 1, 10, 15));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard4>(), 1, 2, 2));
                 return true;
             }
 
