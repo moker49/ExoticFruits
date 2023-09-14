@@ -8,9 +8,6 @@ Check out [url=https://github.com/moker49/ExoticFruits]the repo[/url] for specif
 
 [h1]Release Notes[/h1]
 
-[b]v1.5.2[/b]
-- Added a recipe to vanilla Life Fruit
-
 [b]v1.5[/b]
 - Added 10 more fruits to Calamity users (post-moonlord bosses)
 

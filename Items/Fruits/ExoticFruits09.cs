@@ -39,11 +39,11 @@ namespace ExoticFruits.Items.Fruits
         {
             if (ExoticFruits.enableFruitRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.LunarBar, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeFruit, ItemID.LunarBar, 2);
             }
             if (ExoticFruits.enableCrystalRecipes)
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.LunarBar, ExoticFruits.DefaultAmount);
+                base.CreateFinalRecipe(ItemID.LifeCrystal, ItemID.LunarBar, 2);
             }
         }
     }

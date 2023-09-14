@@ -35,20 +35,26 @@ namespace ExoticFruits
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard3>(), 1, 10, 15));
             }
+            else
+            {
+                Calamity(npc, npcLoot);
+            }
 
-            // Calamity();
         }
 
-        private bool Calamity()
+        private bool Calamity(NPC npc, NPCLoot npcLoot)
         {
             if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
             {
                 return false;
             }
+            else if (npc.type == calamityMod.Find<ModNPC>("ProfanedGuardianCommander").Type)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard4>(), 1, 10, 15));
+                return true;
+            }
 
-
-
-            return true;
+            return false;
         }
     }
 }

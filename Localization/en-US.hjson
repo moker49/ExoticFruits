@@ -158,6 +158,11 @@ Mods: {
 				Tooltip: Use this to make exotic fruits!
 			}
 
+			ExoticFruitsShard4: {
+				DisplayName: Epiuni Fruit Essense
+				Tooltip: Use this to make exotic fruits!
+			}
+
 			ExoticFruits11: {
 				DisplayName: Epiuni Fruit
 				Tooltip:
@@ -283,7 +288,7 @@ Mods: {
 					Tooltip:
 						'''
 						Bosses that don't drop crafting ingredients will now do so, for the fruits.
-						Disabling this will force the player to use weapon drops from those bosses to make the fruits.
+						If disabled: The player will need to use unique drops (like weapons) from those bosses to make the fruits.
 						'''
 				}
 
@@ -314,35 +319,17 @@ Mods: {
 
 				lifePerFruit: {
 					Label: "[i:188] Life Gain Per Fruit"
-					Tooltip:
-						'''
-						Made from the life essence of Calamity.
-						Increases maximum life by <lifeGain>.
-						Increases maximum mana by <manaGain>.
-						Consumed: <consumed>/<cap>
-						'''
+					Tooltip: ""
 				}
 
 				manaPerFruit: {
 					Label: "[i:189] Mana Gain Per Fruit"
-					Tooltip:
-						'''
-						Made from the life essence of Calamity.
-						Increases maximum life by <lifeGain>.
-						Increases maximum mana by <manaGain>.
-						Consumed: <consumed>/<cap>
-						'''
+					Tooltip: ""
 				}
 
 				potionDefenseValue: {
 					Label: "[i:292] Defense Potion Strength"
-					Tooltip:
-						'''
-						Made from the life essence of Calamity.
-						Increases maximum life by <lifeGain>.
-						Increases maximum mana by <manaGain>.
-						Consumed: <consumed>/<cap>
-						'''
+					Tooltip: ""
 				}
 
 				potionDefenseDuration: {
