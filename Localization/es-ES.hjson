@@ -1,0 +1,349 @@
+Mods: {
+	ExoticFruits: {
+		Buffs: {
+			ExoticFruitsDefenseBuff: {
+				DisplayName: Exopiel
+				Description: Incremento de defensa mayor.
+			}
+		}
+
+		Items: {
+			ExoticFruits00: {
+				DisplayName: Pindil
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Queen Slime.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits01: {
+				DisplayName: Kadevan
+				Tooltip:
+					'''
+					Hecho de la esencia vital de The Twins.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits02: {
+				DisplayName: Zitallah
+				Tooltip:
+					'''
+					Hecho de la esencia vital de The Destroyer.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits03: {
+				DisplayName: Undil
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Skeletron Prime.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits04: {
+				DisplayName: Iraepeli
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Plantera.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits05: {
+				DisplayName: Jabryn
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Golem.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits06: {
+				DisplayName: Xangra
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Duke Fishron.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits07: {
+				DisplayName: Ocyn
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Empress of Light.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits08: {
+				DisplayName: Tupaldi
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Lunatic Cultist.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits09: {
+				DisplayName: Olu
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Moon Lord.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits10: {
+				DisplayName: Xadori
+				Tooltip:
+					'''
+					El delicioso néctar absoluto de los dioses caídos.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruitsDefensePotion: {
+				DisplayName: Posión Exopiel
+				Tooltip:
+					'''
+					Hecho de la sangre de los dioses caídos.
+					Incrementa defensa por <defenseGain>.
+					'''
+			}
+
+			ExoticFruitsShard0: {
+				DisplayName: Esencia Iraepeli
+				Tooltip: Úsalas para crear frutas exóticas!
+			}
+
+			ExoticFruitsShard1: {
+				DisplayName: Esencia Xangra
+				Tooltip: Úsalas para crear frutas exóticas!
+			}
+
+			ExoticFruitsShard2: {
+				DisplayName: Esencia Ocyn
+				Tooltip: Úsalas para crear frutas exóticas!
+			}
+
+			ExoticFruitsShard3: {
+				DisplayName: Esencia Tupaldi
+				Tooltip: Úsalas para crear frutas exóticas!
+			}
+
+			ExoticFruitsShard4: {
+				DisplayName: Esencia Epiuni
+				Tooltip: Úsalas para crear frutas exóticas!
+			}
+
+			ExoticFruits11: {
+				DisplayName: Epiuni
+				Tooltip:
+					'''
+					Hecho de la esencia vital de The Profaned Guardians.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits12: {
+				DisplayName: Oblicus
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Dragonfolly.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits13: {
+				DisplayName: Luntim
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Providence.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits14: {
+				DisplayName: Trochlo
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Storm Weaver.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits15: {
+				DisplayName: Baharub
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Ceaseless Void.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits16: {
+				DisplayName: Lirasat
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Signus.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits17: {
+				DisplayName: Makitish
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Polterghast.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits18: {
+				DisplayName: Koroxilis
+				Tooltip:
+					'''
+					Hecho de la esencia vital de The Old Duke.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits19: {
+				DisplayName: Figgensul
+				Tooltip:
+					'''
+					Hecho de la esencia vital de The Devourer of Gods.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits20: {
+				DisplayName: Volormorc
+				Tooltip:
+					'''
+					Hecho de la esencia vital de Yharon.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			LifeFruitShard: {
+				DisplayName: Fruit Chunk
+				Tooltip: This could be tasty.
+			}
+		}
+
+		Configs: {
+			Config: {
+				DisplayName: Config
+
+				enableFruitShards: {
+					Label: "[i:1611] Ingredientes Personalisados"
+					Tooltip:
+						'''
+						Esto solo afecta jefes que no dejan caer ingredientes.
+						Habilitado: Jefes ahora dejarán caer ingredientes personalisados.
+						Deshabilitado: Recompensas únicas (como armas) serán los ingredientes de las frutas.
+						'''
+				}
+
+				enableCrystalRecipes: {
+					Label: "[i:29] Resetas Con Life Crystal"
+					Tooltip: Habilita recetas con Life Crystals
+				}
+
+				enableFruitRecipes: {
+					Label: "[i:1291] Resetas Con Life Fruit"
+					Tooltip: Habilita recetas con Life Fruits
+				}
+
+				lifeRequired: {
+					Label: "[i:29] Requerimiento De Vida"
+					Tooltip: Vida máxima requerida para consumir frutas
+				}
+
+				manaRequired: {
+					Label: "[i:109] Requerimiento De Mana"
+					Tooltip: Mana máxima requerida para consumir frutas
+				}
+
+				maxFruits: {
+					Label: "[i:18] Consumo Máximo"
+					Tooltip: Consumo máximo por fruta
+				}
+
+				lifePerFruit: {
+					Label: "[i:188] Incremento De Vida Por Fruta"
+					Tooltip: ""
+				}
+
+				manaPerFruit: {
+					Label: "[i:189] Incremento De Mana Por Fruta"
+					Tooltip: ""
+				}
+
+				potionDefenseValue: {
+					Label: "[i:292] Potencia De Posión Defensiva"
+					Tooltip: ""
+				}
+
+				potionDefenseDuration: {
+					Label: "[i:17] Duración De Posión Defensiva"
+					Tooltip: Duración en minutos
+				}
+
+				Headers: {
+					recipes: Resetas
+					requirements: Requerimientos
+					stat_gain: Estadísticas
+				}
+			}
+		}
+	}
+}

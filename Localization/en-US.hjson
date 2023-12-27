@@ -287,8 +287,9 @@ Mods: {
 					Label: "[i:1611] Custom Boss Ingredients"
 					Tooltip:
 						'''
-						Bosses that don't drop crafting ingredients will now do so, for the fruits.
-						If disabled: The player will need to use unique drops (like weapons) from those bosses to make the fruits.
+						This only affects bosses that don't drop crafting ingredients.
+						Enabled: Bosses will now drop custom fruit ingredients.
+						Disabled: Unique drops (like weapons) will be the ingredients to make the fruits.
 						'''
 				}
 
