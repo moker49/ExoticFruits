@@ -329,12 +329,12 @@ Mods: {
 				}
 
 				potionDefenseValue: {
-					Label: "[i:292] Potencia De Posión Defensiva"
+					Label: "[i:292] Potencia De Posión"
 					Tooltip: ""
 				}
 
 				potionDefenseDuration: {
-					Label: "[i:17] Duración De Posión Defensiva"
+					Label: "[i:17] Duración De Posión"
 					Tooltip: Duración en minutos
 				}
 

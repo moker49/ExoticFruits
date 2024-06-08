@@ -329,12 +329,12 @@ Mods: {
 				}
 
 				potionDefenseValue: {
-					Label: "[i:292] Defense Potion Strength"
+					Label: "[i:292] Potion Strength"
 					Tooltip: ""
 				}
 
 				potionDefenseDuration: {
-					Label: "[i:17] Defense Potion Duration"
+					Label: "[i:17] Potion Duration"
 					Tooltip: Duration in minutes
 				}
 
