@@ -33,11 +33,6 @@ namespace ExoticFruits
             {
                 itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ExoticFruitsShard3>(), 1, 10, 15));
             }
-            else
-            {
-                Calamity(item, itemLoot);
-            }
-
         }
 
 
@@ -46,16 +41,6 @@ namespace ExoticFruits
             Recipe recipe = Recipe.Create(ItemID.LifeFruit);
             recipe.AddIngredient(ModContent.ItemType<LifeFruitShard>(), 2);
             recipe.Register();
-        }
-
-        private bool Calamity(Item item, ItemLoot itemLoot)
-        {
-            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
-            {
-                return false;
-            }
-
-            return true;
         }
     }
 }
