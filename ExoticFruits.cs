@@ -1,6 +1,7 @@
 using ExoticFruits.Configs;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 
 namespace ExoticFruits
 {
@@ -22,5 +23,6 @@ namespace ExoticFruits
         internal static Color softCyan = new Color(100, 200, 230);
 
         internal static bool calamityLoaded = ModLoader.TryGetMod("CalamityMod", out Mod calamityMod);
+        internal static bool catalystLoaded = ModLoader.TryGetMod("CatalystMod", out Mod catalystMod);
     }
 }

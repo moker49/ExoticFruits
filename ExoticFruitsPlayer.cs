@@ -10,6 +10,7 @@ namespace ExoticFruits
     {
         public byte[] fruitsConsumed = new byte[10];
         public byte[] calamityFruitsConsumed = new byte[10];
+        public byte[] catalystFruitsConsumed = new byte[10];
         public int bigFruitsConsumed = 0;
         public override void ResetEffects()
         {
@@ -20,23 +21,35 @@ namespace ExoticFruits
                 Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(fruitConsumed, ExoticFruits.MaxFruits);
             }
 
-            // calamity fruits
-            LoadCalamityFruitStats();
+            // other mod fruits
+            LoadModFruitStats();
 
             string name = Player.name;
             Player.statLifeMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
             Player.statManaMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
         }
 
-        private bool LoadCalamityFruitStats()
+        private void LoadModFruitStats()
         {
-            if (!ExoticFruits.calamityLoaded) return false;
-            foreach (byte calamityFruitConsumed in calamityFruitsConsumed)
+            // calamity
+            if (!ExoticFruits.calamityLoaded)
             {
-                Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(calamityFruitConsumed, ExoticFruits.MaxFruits);
-                Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(calamityFruitConsumed, ExoticFruits.MaxFruits);
+                foreach (byte calamityFruitConsumed in calamityFruitsConsumed)
+                {
+                    Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(calamityFruitConsumed, ExoticFruits.MaxFruits);
+                    Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(calamityFruitConsumed, ExoticFruits.MaxFruits);
+                }
             }
-            return true;
+
+            // catalyst
+            if (!ExoticFruits.catalystLoaded)
+            {
+                foreach (byte catalystFruitConsumed in catalystFruitsConsumed)
+                {
+                    Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(catalystFruitConsumed, ExoticFruits.MaxFruits);
+                    Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(catalystFruitConsumed, ExoticFruits.MaxFruits);
+                }
+            }
         }
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
@@ -46,6 +59,7 @@ namespace ExoticFruits
             packet.Write((byte)Player.whoAmI);
             packet.Write(fruitsConsumed);
             packet.Write(calamityFruitsConsumed);
+            packet.Write(catalystFruitsConsumed);
             packet.Write(bigFruitsConsumed);
             packet.Send(toWho, fromWho);
         }
@@ -54,6 +68,7 @@ namespace ExoticFruits
         {
             tag["ExoticFruitss"] = fruitsConsumed;
             tag["ExoticFruitssCalamity"] = calamityFruitsConsumed;
+            tag["ExoticFruitssCatalyst"] = catalystFruitsConsumed;
             tag["exoticFruitsBigFruit"] = bigFruitsConsumed;
         }
 
@@ -63,26 +78,22 @@ namespace ExoticFruits
             {
                 fruitsConsumed = (byte[])tag["ExoticFruitss"];
             }
-            catch (System.Exception)
-            {
-
-            }
+            catch (Exception) { }
             try
             {
                 calamityFruitsConsumed = (byte[])tag["ExoticFruitssCalamity"];
             }
-            catch (System.Exception)
+            catch (Exception) { }
+            try
             {
-
+                catalystFruitsConsumed = (byte[])tag["ExoticFruitssCatalyst"];
             }
+            catch (Exception) { }
             try
             {
                 bigFruitsConsumed = (int)tag["exoticFruitsBigFruit"];
             }
-            catch (System.Exception)
-            {
-
-            }
+            catch (Exception) { }
         }
     }
 }

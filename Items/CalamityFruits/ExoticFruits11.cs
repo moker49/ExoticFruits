@@ -42,13 +42,27 @@ namespace ExoticFruits.Items.CalamityFruits
                 return;
             }
 
-            if (ExoticFruits.enableFruitRecipes)
+            if (ExoticFruits.enableFruitShards)
             {
-                base.CreateFinalRecipe(ItemID.LifeFruit, calamityMod.Find<ModItem>("ProfanedCore").Type, 1);
+                if (ExoticFruits.enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, ModContent.ItemType<Shards.ExoticFruitsShard4>(), 1);
+                }
+                if (ExoticFruits.enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, ModContent.ItemType<Shards.ExoticFruitsShard4>(), 1);
+                }
             }
-            if (ExoticFruits.enableCrystalRecipes)
+            else
             {
-                base.CreateFinalRecipe(ItemID.LifeCrystal, calamityMod.Find<ModItem>("ProfanedCore").Type, 1);
+                if (ExoticFruits.enableFruitRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeFruit, calamityMod.Find<ModItem>("ProfanedCore").Type, 1);
+                }
+                if (ExoticFruits.enableCrystalRecipes)
+                {
+                    base.CreateFinalRecipe(ItemID.LifeCrystal, calamityMod.Find<ModItem>("ProfanedCore").Type, 1);
+                }
             }
 
         }
