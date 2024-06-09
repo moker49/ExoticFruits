@@ -5,10 +5,11 @@ using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace ExoticFruits.Items.Fruits
+namespace ExoticFruits.Items.CatalystFruits
 {
-    internal class ExoticFruits10 : ModItem
+    internal class ExoticFruits21 : ModItem
     {
+        private readonly int catalystFruitIndex = 0;
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -38,12 +39,12 @@ namespace ExoticFruits.Items.Fruits
                     else if (player.bigFruitsConsumed >= ExoticFruits.MaxFruits)
                     {
                         line.OverrideColor = ExoticFruits.softCyan;
-                        if (player.bigFruitsConsumed > ExoticFruits.MaxFruits)
+                        if (player.catalystFruitsConsumed[catalystFruitIndex] > ExoticFruits.MaxFruits)
                         {
                             capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
                         }
                     }
-                    newLine = line.Text.Replace("<consumed>", player.bigFruitsConsumed.ToString());
+                    newLine = line.Text.Replace("<consumed>", player.catalystFruitsConsumed[catalystFruitIndex].ToString());
                     newLine = newLine.Replace("<cap>", maxFruits.ToString());
                     newLine += capped;
                 }
@@ -69,7 +70,7 @@ namespace ExoticFruits.Items.Fruits
         }
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().bigFruitsConsumed < ExoticFruits.MaxFruits;
+            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().catalystFruitsConsumed[catalystFruitIndex] < ExoticFruits.MaxFruits;
         }
 
         public override bool? UseItem(Player player)
@@ -82,14 +83,21 @@ namespace ExoticFruits.Items.Fruits
             {
                 player.HealEffect(ExoticFruits.BigFruitLifeValue);
             }
-            player.GetModPlayer<ExoticFruitsPlayer>().bigFruitsConsumed++;
+
+            player.GetModPlayer<ExoticFruitsPlayer>().catalystFruitsConsumed[catalystFruitIndex]++;
+
             return true;
         }
 
         public override void AddRecipes()
         {
+            if (!ModLoader.TryGetMod("CatalystMod", out Mod catalystMod))
+            {
+                return;
+            }
+
             CreateRecipe()
-                    .AddIngredient(ModContent.ItemType<ExoticFruits09>())
+                    .AddIngredient(catalystMod.Find<ModItem>("AstraJelly").Type, 1)
                     .AddIngredient(ItemID.AegisCrystal, 2)
                     .AddIngredient(ItemID.ArcaneCrystal, 2)
                     .AddIngredient(ItemID.PixieDust, 1)

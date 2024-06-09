@@ -273,6 +273,17 @@ Mods: {
 					'''
 			}
 
+			ExoticFruits21: {
+				DisplayName: Catalytic Povubell Fruit
+				Tooltip:
+					'''
+					Made from the life essence of Astrageldon.
+					Increases maximum life by <lifeGain>.
+					Increases maximum mana by <manaGain>.
+					Consumed: <consumed>/<cap>
+					'''
+			}
+
 			LifeFruitShard: {
 				DisplayName: Fruit Chunk
 				Tooltip: This could be tasty.

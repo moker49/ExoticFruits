@@ -12,7 +12,7 @@ Mods: {
 				DisplayName: Pindil
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Queen Slime.
+					Hecha de la esencia vital de Queen Slime.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -23,7 +23,7 @@ Mods: {
 				DisplayName: Kadevan
 				Tooltip:
 					'''
-					Hecho de la esencia vital de The Twins.
+					Hecha de la esencia vital de The Twins.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -34,7 +34,7 @@ Mods: {
 				DisplayName: Zitallah
 				Tooltip:
 					'''
-					Hecho de la esencia vital de The Destroyer.
+					Hecha de la esencia vital de The Destroyer.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -45,7 +45,7 @@ Mods: {
 				DisplayName: Undil
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Skeletron Prime.
+					Hecha de la esencia vital de Skeletron Prime.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -56,7 +56,7 @@ Mods: {
 				DisplayName: Iraepeli
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Plantera.
+					Hecha de la esencia vital de Plantera.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -67,7 +67,7 @@ Mods: {
 				DisplayName: Jabryn
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Golem.
+					Hecha de la esencia vital de Golem.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -78,7 +78,7 @@ Mods: {
 				DisplayName: Xangra
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Duke Fishron.
+					Hecha de la esencia vital de Duke Fishron.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -89,7 +89,7 @@ Mods: {
 				DisplayName: Ocyn
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Empress of Light.
+					Hecha de la esencia vital de Empress of Light.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -100,7 +100,7 @@ Mods: {
 				DisplayName: Tupaldi
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Lunatic Cultist.
+					Hecha de la esencia vital de Lunatic Cultist.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -111,7 +111,7 @@ Mods: {
 				DisplayName: Olu
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Moon Lord.
+					Hecha de la esencia vital de Moon Lord.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -133,7 +133,7 @@ Mods: {
 				DisplayName: Posión Exopiel
 				Tooltip:
 					'''
-					Hecho de la sangre de los dioses caídos.
+					Hecha de la sangre de los dioses caídos.
 					Incrementa defensa por <defenseGain>.
 					'''
 			}
@@ -167,7 +167,7 @@ Mods: {
 				DisplayName: Epiuni
 				Tooltip:
 					'''
-					Hecho de la esencia vital de The Profaned Guardians.
+					Hecha de la esencia vital de The Profaned Guardians.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -178,7 +178,7 @@ Mods: {
 				DisplayName: Oblicus
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Dragonfolly.
+					Hecha de la esencia vital de Dragonfolly.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -189,7 +189,7 @@ Mods: {
 				DisplayName: Luntim
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Providence.
+					Hecha de la esencia vital de Providence.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -200,7 +200,7 @@ Mods: {
 				DisplayName: Trochlo
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Storm Weaver.
+					Hecha de la esencia vital de Storm Weaver.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -211,7 +211,7 @@ Mods: {
 				DisplayName: Baharub
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Ceaseless Void.
+					Hecha de la esencia vital de Ceaseless Void.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -222,7 +222,7 @@ Mods: {
 				DisplayName: Lirasat
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Signus.
+					Hecha de la esencia vital de Signus.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -233,7 +233,7 @@ Mods: {
 				DisplayName: Makitish
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Polterghast.
+					Hecha de la esencia vital de Polterghast.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -244,7 +244,7 @@ Mods: {
 				DisplayName: Koroxilis
 				Tooltip:
 					'''
-					Hecho de la esencia vital de The Old Duke.
+					Hecha de la esencia vital de The Old Duke.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -255,7 +255,7 @@ Mods: {
 				DisplayName: Figgensul
 				Tooltip:
 					'''
-					Hecho de la esencia vital de The Devourer of Gods.
+					Hecha de la esencia vital de The Devourer of Gods.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
@@ -266,10 +266,21 @@ Mods: {
 				DisplayName: Volormorc
 				Tooltip:
 					'''
-					Hecho de la esencia vital de Yharon.
+					Hecha de la esencia vital de Yharon.
 					Incrementa vida máxima por <lifeGain>.
 					Incrementa mana máxima por <manaGain>.
 					Consumida: <consumed>/<cap>
+					'''
+			}
+
+			ExoticFruits21: {
+				DisplayName: Povubell Catálica
+				Tooltip:
+					'''
+					Hecha de la esencia vital de Astrageldon.
+					Incrementa vida máxima por <lifeGain>.
+					Incrementa mana máxima por <manaGain>.
+					Consumed: <consumed>/<cap>
 					'''
 			}
 

@@ -24,15 +24,15 @@ namespace ExoticFruits
             // other mod fruits
             LoadModFruitStats();
 
-            string name = Player.name;
-            Player.statLifeMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
-            Player.statManaMax2 += ExoticFruits.BigFruitValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
+            // vanilla big fruits
+            Player.statLifeMax2 += ExoticFruits.BigFruitLifeValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
+            Player.statManaMax2 += ExoticFruits.BigFruitManaValue * Math.Min(bigFruitsConsumed, ExoticFruits.MaxFruits);
         }
 
         private void LoadModFruitStats()
         {
             // calamity
-            if (!ExoticFruits.calamityLoaded)
+            if (ExoticFruits.calamityLoaded)
             {
                 foreach (byte calamityFruitConsumed in calamityFruitsConsumed)
                 {
@@ -41,13 +41,13 @@ namespace ExoticFruits
                 }
             }
 
-            // catalyst
-            if (!ExoticFruits.catalystLoaded)
+            // catalyst (big fruits)
+            if (ExoticFruits.catalystLoaded)
             {
                 foreach (byte catalystFruitConsumed in catalystFruitsConsumed)
                 {
-                    Player.statLifeMax2 += ExoticFruits.LifePerFruit * Math.Min(catalystFruitConsumed, ExoticFruits.MaxFruits);
-                    Player.statManaMax2 += ExoticFruits.ManaPerFruit * Math.Min(catalystFruitConsumed, ExoticFruits.MaxFruits);
+                    Player.statLifeMax2 += ExoticFruits.BigFruitLifeValue * Math.Min(catalystFruitConsumed, ExoticFruits.MaxFruits);
+                    Player.statManaMax2 += ExoticFruits.BigFruitManaValue * Math.Min(catalystFruitConsumed, ExoticFruits.MaxFruits);
                 }
             }
         }
