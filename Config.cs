@@ -33,7 +33,7 @@ namespace ExoticFruits.Configs
 		public int lifeRequired;
 
 		[Range(0, 200)]
-        [Increment(100)]
+		[Increment(100)]
 		[DefaultValue(0)]
 		[Slider]
 		[DrawTicks]
@@ -65,6 +65,22 @@ namespace ExoticFruits.Configs
 		[DrawTicks]
 		[ReloadRequired]
 		public int manaPerFruit;
+
+		[Range(1, 5)]
+		[Increment(1)]
+		[DefaultValue(3)]
+		[Slider]
+		[DrawTicks]
+		[ReloadRequired]
+		public int bigFruitLifeMult;
+
+		[Range(1, 5)]
+		[Increment(1)]
+		[DefaultValue(2)]
+		[Slider]
+		[DrawTicks]
+		[ReloadRequired]
+		public int bigFruitManaMult;
 
 		[Range(10, 150)]
 		[Increment(10)]

@@ -292,7 +292,13 @@ Mods: {
 
 		Configs: {
 			Config: {
-				DisplayName: Config
+				DisplayName: Configuración
+
+				Headers: {
+					recipes: Recetas
+					requirements: Requerimientos
+					stat_gain: Estadísticas
+				}
 
 				enableFruitShards: {
 					Label: "[i:1611] Ingredientes Personalisados"
@@ -349,10 +355,14 @@ Mods: {
 					Tooltip: Duración en minutos
 				}
 
-				Headers: {
-					recipes: Resetas
-					requirements: Requerimientos
-					stat_gain: Estadísticas
+				bigFruitLifeMult: {
+					Label: "[i:2209] Multiplicador de vida de frutas grandes"
+					Tooltip: Frutas grandes usan este multiplicador para determinar su valor de vida
+				}
+
+				bigFruitManaMult: {
+					Label: "[i:2209] Multiplicador de mana de frutas grandes"
+					Tooltip: Frutas grandes usan este multiplicador para determinar su valor de mana
 				}
 			}
 		}
