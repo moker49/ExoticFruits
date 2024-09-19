@@ -22,7 +22,6 @@ namespace ExoticFruits.Items.CatalystFruits
         }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            ExoticFruitsPlayer player = Main.player[Main.myPlayer].GetModPlayer<ExoticFruitsPlayer>();
             string capped = "";
             foreach (var line in tooltips)
             {
@@ -31,20 +30,20 @@ namespace ExoticFruits.Items.CatalystFruits
 
                 if (line.Text.Contains("<consumed>"))
                 {
-                    if (player.bigFruitsConsumed < ExoticFruits.MaxFruits)
+                    if (ExoticFruitsPlayer.bigFruitsConsumed < ExoticFruits.MaxFruits)
                     {
                         line.OverrideColor = null;
                         line.IsModifier = true;
                     }
-                    else if (player.bigFruitsConsumed >= ExoticFruits.MaxFruits)
+                    else if (ExoticFruitsPlayer.bigFruitsConsumed >= ExoticFruits.MaxFruits)
                     {
                         line.OverrideColor = ExoticFruits.softCyan;
-                        if (player.catalystFruitsConsumed[catalystFruitIndex] > ExoticFruits.MaxFruits)
+                        if (ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex] > ExoticFruits.MaxFruits)
                         {
                             capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
                         }
                     }
-                    newLine = line.Text.Replace("<consumed>", player.catalystFruitsConsumed[catalystFruitIndex].ToString());
+                    newLine = line.Text.Replace("<consumed>", ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex].ToString());
                     newLine = newLine.Replace("<cap>", maxFruits.ToString());
                     newLine += capped;
                 }
@@ -70,7 +69,7 @@ namespace ExoticFruits.Items.CatalystFruits
         }
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().catalystFruitsConsumed[catalystFruitIndex] < ExoticFruits.MaxFruits;
+            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex] < ExoticFruits.MaxFruits;
         }
 
         public override bool? UseItem(Player player)
@@ -84,7 +83,7 @@ namespace ExoticFruits.Items.CatalystFruits
                 player.HealEffect(ExoticFruits.BigFruitLifeValue);
             }
 
-            player.GetModPlayer<ExoticFruitsPlayer>().catalystFruitsConsumed[catalystFruitIndex]++;
+            ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex]++;
 
             return true;
         }

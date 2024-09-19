@@ -8,10 +8,11 @@ namespace ExoticFruits
 {
     public class ExoticFruitsPlayer : ModPlayer
     {
-        public byte[] fruitsConsumed = new byte[10];
-        public byte[] calamityFruitsConsumed = new byte[10];
-        public byte[] catalystFruitsConsumed = new byte[10];
-        public int bigFruitsConsumed = 0;
+        public static byte[] fruitsConsumed = new byte[10];
+        public static byte[] calamityFruitsConsumed = new byte[10];
+        public static byte[] catalystFruitsConsumed = new byte[10];
+        public static int bigFruitsConsumed = 0;
+
         public override void ResetEffects()
         {
             // vanilla fruits
@@ -95,5 +96,18 @@ namespace ExoticFruits
             }
             catch (Exception) { }
         }
+
+        public static int getFruitsConsumed(ExoticFruits.FruitType fruitType, int fruitIndex)
+        {
+            switch (fruitType)
+            {
+                case ExoticFruits.FruitType.VANILLA: return fruitsConsumed[fruitIndex];
+                case ExoticFruits.FruitType.BIG: return bigFruitsConsumed;
+                case ExoticFruits.FruitType.CALAMITY: return calamityFruitsConsumed[fruitIndex];
+                case ExoticFruits.FruitType.CATALYST: return catalystFruitsConsumed[fruitIndex];
+                default: return 0;
+            }
+        }
+
     }
 }

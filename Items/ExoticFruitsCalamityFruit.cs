@@ -14,12 +14,12 @@ namespace ExoticFruits.Items
 
         internal bool CanUseItemBase(Player player, int calamityFruitIndex)
         {
-            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && player.GetModPlayer<ExoticFruitsPlayer>().calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits;
+            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits;
         }
         internal bool UseItemBase(Player player, int calamityFruitIndex)
         {
             BuffPlayer(player, ExoticFruits.LifePerFruit, ExoticFruits.ManaPerFruit);
-            player.GetModPlayer<ExoticFruitsPlayer>().calamityFruitsConsumed[calamityFruitIndex]++;
+            ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex]++;
             return true;
         }
         internal void BuffPlayer(Player player, int lifeAmount, int manaAmount)
@@ -35,7 +35,6 @@ namespace ExoticFruits.Items
         }
         public void ModifyTooltipsFruit(int calamityFruitIndex, List<TooltipLine> tooltips)
         {
-            ExoticFruitsPlayer player = Main.player[Main.myPlayer].GetModPlayer<ExoticFruitsPlayer>();
             string capped = "";
             foreach (var line in tooltips)
             {
@@ -51,7 +50,7 @@ namespace ExoticFruits.Items
                         line.IsModifierBad = true;
                         capped += $" > 0/{maxFruits}"; // Consumed: 2/1 > 0/0
                     }
-                    else if (player.calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits)
+                    else if (ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits)
                     {
                         line.OverrideColor = null;
                         line.IsModifier = true;
@@ -60,13 +59,13 @@ namespace ExoticFruits.Items
                     {
                         line.OverrideColor = ExoticFruits.softCyan;
 
-                        if (player.calamityFruitsConsumed[calamityFruitIndex] > ExoticFruits.MaxFruits)
+                        if (ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex] > ExoticFruits.MaxFruits)
                         {
                             capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
                         }
 
                     }
-                    newLine = line.Text.Replace("<consumed>", player.calamityFruitsConsumed[calamityFruitIndex].ToString());
+                    newLine = line.Text.Replace("<consumed>", ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex].ToString());
                     newLine = newLine.Replace("<cap>", maxFruits.ToString());
                     newLine += capped;
                 }
