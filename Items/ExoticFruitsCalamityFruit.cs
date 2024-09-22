@@ -35,12 +35,12 @@ namespace ExoticFruits.Items
         }
         public void ModifyTooltipsFruit(int calamityFruitIndex, List<TooltipLine> tooltips)
         {
-            string capped = "";
+            int consumedFruits = ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex];
+            int maxFruits = ExoticFruits.MaxFruits;
+            string consumedText = consumedFruits > maxFruits ? $" > {maxFruits}/{maxFruits}" : string.Empty;
+
             foreach (var line in tooltips)
             {
-                string newLine = "";
-                int maxFruits = ExoticFruits.MaxFruits;
-
                 if (line.Text.Contains("<consumed>"))
                 {
                     if (!ExoticFruits.calamityLoaded)
@@ -48,42 +48,28 @@ namespace ExoticFruits.Items
                         line.OverrideColor = null;
                         line.IsModifier = true;
                         line.IsModifierBad = true;
-                        capped += $" > 0/{maxFruits}"; // Consumed: 2/1 > 0/0
-                    }
-                    else if (ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex] < ExoticFruits.MaxFruits)
-                    {
-                        line.OverrideColor = null;
-                        line.IsModifier = true;
+                        consumedText = $" > 0/{maxFruits}";
                     }
                     else
                     {
-                        line.OverrideColor = ExoticFruits.softCyan;
-
-                        if (ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex] > ExoticFruits.MaxFruits)
-                        {
-                            capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
-                        }
-
+                        line.OverrideColor = consumedFruits >= maxFruits ? ExoticFruits.softCyan : null;
+                        line.IsModifier = true;
                     }
-                    newLine = line.Text.Replace("<consumed>", ExoticFruitsPlayer.calamityFruitsConsumed[calamityFruitIndex].ToString());
-                    newLine = newLine.Replace("<cap>", maxFruits.ToString());
-                    newLine += capped;
+
+                    line.Text = line.Text.Replace("<consumed>", consumedFruits.ToString())
+                                         .Replace("<cap>", maxFruits.ToString()) + consumedText;
                 }
                 else if (line.Text.Contains("<lifeGain>"))
                 {
-                    newLine = line.Text.Replace("<lifeGain>", ExoticFruits.LifePerFruit.ToString());
+                    line.Text = line.Text.Replace("<lifeGain>", ExoticFruits.LifePerFruit.ToString());
                 }
                 else if (line.Text.Contains("<manaGain>"))
                 {
-                    newLine = line.Text.Replace("<manaGain>", ExoticFruits.ManaPerFruit.ToString());
+                    line.Text = line.Text.Replace("<manaGain>", ExoticFruits.ManaPerFruit.ToString());
                 }
-                else
-                {
-                    continue;
-                }
-                line.Text = newLine;
             }
         }
+
         internal void CreateFinalRecipe(int lifeCrystalOrFruit, int lastIngredient, int amount)
         {
             CreateRecipe()

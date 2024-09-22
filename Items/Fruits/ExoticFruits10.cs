@@ -21,46 +21,30 @@ namespace ExoticFruits.Items.Fruits
         }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            string capped = "";
+            int maxFruits = ExoticFruits.MaxFruits;
+            string consumedText = ExoticFruitsPlayer.bigFruitsConsumed > maxFruits
+                ? $" > {maxFruits}/{maxFruits}"
+                : string.Empty;
+
             foreach (var line in tooltips)
             {
-                string newLine = "";
-                int maxFruits = ExoticFruits.MaxFruits;
-
                 if (line.Text.Contains("<consumed>"))
                 {
-                    if (ExoticFruitsPlayer.bigFruitsConsumed < ExoticFruits.MaxFruits)
-                    {
-                        line.OverrideColor = null;
-                        line.IsModifier = true;
-                    }
-                    else if (ExoticFruitsPlayer.bigFruitsConsumed >= ExoticFruits.MaxFruits)
-                    {
-                        line.OverrideColor = ExoticFruits.softCyan;
-                        if (ExoticFruitsPlayer.bigFruitsConsumed > ExoticFruits.MaxFruits)
-                        {
-                            capped += $" > {maxFruits}/{maxFruits}"; // Consumed: 2/1 > 1/1
-                        }
-                    }
-                    newLine = line.Text.Replace("<consumed>", ExoticFruitsPlayer.bigFruitsConsumed.ToString());
-                    newLine = newLine.Replace("<cap>", maxFruits.ToString());
-                    newLine += capped;
+                    line.Text = line.Text.Replace("<consumed>", ExoticFruitsPlayer.bigFruitsConsumed.ToString()).Replace("<cap>", maxFruits.ToString()) + consumedText;
+                    line.OverrideColor = ExoticFruitsPlayer.bigFruitsConsumed >= maxFruits ? ExoticFruits.softCyan : null;
+                    line.IsModifier = true;
                 }
                 else if (line.Text.Contains("<lifeGain>"))
                 {
-                    newLine = line.Text.Replace("<lifeGain>", ExoticFruits.BigFruitLifeValue.ToString());
+                    line.Text = line.Text.Replace("<lifeGain>", ExoticFruits.BigFruitLifeValue.ToString());
                 }
                 else if (line.Text.Contains("<manaGain>"))
                 {
-                    newLine = line.Text.Replace("<manaGain>", ExoticFruits.BigFruitManaValue.ToString());
+                    line.Text = line.Text.Replace("<manaGain>", ExoticFruits.BigFruitManaValue.ToString());
                 }
-                else
-                {
-                    continue;
-                }
-                line.Text = newLine;
             }
         }
+
         public override void SetDefaults()
         {
             Item.CloneDefaults(ItemID.LifeFruit);
