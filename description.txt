@@ -8,6 +8,9 @@ Check out [url=https://github.com/moker49/ExoticFruits]the repo[/url] for specif
 
 [h1]Release Notes[/h1]
 
+[b]v1.6[/b]
+- Added [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3310041861]Munchie's Consumables[/url] support.
+
 [b]v1.5[/b]
 - Added 10 more fruits to Calamity users (post-moonlord bosses)
 

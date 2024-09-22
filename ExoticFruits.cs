@@ -7,6 +7,14 @@ namespace ExoticFruits
 {
     public class ExoticFruits : Mod
     {
+        public enum FruitType
+        {
+            VANILLA,
+            BIG,
+            CALAMITY,
+            CATALYST
+        }
+        internal static ExoticFruits instance;
         internal static int MaxFruits = ModContent.GetInstance<Config>().maxFruits;
         internal static int LifePerFruit = ModContent.GetInstance<Config>().lifePerFruit;
         internal static int ManaPerFruit = ModContent.GetInstance<Config>().manaPerFruit;
@@ -25,5 +33,27 @@ namespace ExoticFruits
 
         internal static bool calamityLoaded = ModLoader.TryGetMod("CalamityMod", out Mod calamityMod);
         internal static bool catalystLoaded = ModLoader.TryGetMod("CatalystMod", out Mod catalystMod);
+        internal static Mod MunchiesMod;
+
+        public override void Load()
+        {
+            instance = this;
+        }
+
+        public override void Unload()
+        {
+            instance = null;
+        }
+        public override void PostSetupContent()
+        {
+            // Munchie's Consumables
+            if (ModLoader.TryGetMod("Munchies", out Mod munchiesMod))
+            {
+                MunchiesMod = munchiesMod;
+                MunchiesModSupport.AddExoticConsumables();
+            }
+        }
+
+
     }
 }
