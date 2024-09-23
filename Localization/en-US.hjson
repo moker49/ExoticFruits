@@ -17,7 +17,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Queen Slime, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Queen Slime, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits01: {
@@ -29,7 +29,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from The Twins, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from The Twins, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits02: {
@@ -41,7 +41,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from The Destroyer, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from The Destroyer, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits03: {
@@ -52,8 +52,8 @@ Mods: {
 					Increases maximum life by <lifeGain>.
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
-					Acquisition: Combine some guts from Skeletron Prime, a Life Fruits, and a Mana Fruit.
 					'''
+				Acquisition: Combine some guts from Sketetron Prime, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits04: {
@@ -65,7 +65,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Plantera, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Plantera, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits05: {
@@ -77,7 +77,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Golem, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Golem, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits06: {
@@ -89,7 +89,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Duke Fishron, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Duke Fishron, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits07: {
@@ -101,7 +101,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from The Empress of Light, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from The Empress of Light, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits08: {
@@ -113,7 +113,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from the Lunatic Cultist, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from the Lunatic Cultist, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits09: {
@@ -125,7 +125,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Moon Lord, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Moon Lord, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits10: {
@@ -183,7 +183,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from The Profaned Guardians, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from The Profaned Guardians, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits12: {
@@ -195,7 +195,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Dragonfolly, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Dragonfolly, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits13: {
@@ -207,7 +207,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Providence, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Providence, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits14: {
@@ -219,7 +219,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Storm Weaver, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Storm Weaver, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits15: {
@@ -231,7 +231,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Ceaseless Void, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Ceaseless Void, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits16: {
@@ -243,7 +243,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Signus, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Signus, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits17: {
@@ -255,7 +255,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Polterghast, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Polterghast, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits18: {
@@ -267,7 +267,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from The Old Duke, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from The Old Duke, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits19: {
@@ -279,7 +279,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from The Devourer of Gods, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from The Devourer of Gods, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits20: {
@@ -291,7 +291,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Yharon, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Yharon, a Life Fruits, and a Mana Fruit.
 			}
 
 			ExoticFruits21: {
@@ -303,7 +303,7 @@ Mods: {
 					Increases maximum mana by <manaGain>.
 					Consumed: <consumed>/<cap>
 					'''
-					Acquisition: Combine some guts from Astrageldon, a Life Fruits, and a Mana Fruit.
+				Acquisition: Combine some guts from Astrageldon, a Life Fruits, and a Mana Fruit.
 			}
 
 			LifeFruitShard: {

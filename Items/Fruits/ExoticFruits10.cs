@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Terraria.Localization;
 
 namespace ExoticFruits.Items.Fruits
 {
@@ -12,6 +13,18 @@ namespace ExoticFruits.Items.Fruits
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+        }
+        public override void SetDefaults()
+        {
+            Item.width = 24;
+            Item.height = 24;
+            Item.rare = ItemRarityID.Red;
+            Item.consumable = true;
+            Item.UseSound = SoundID.Item4;
+            Item.useStyle = ItemUseStyleID.EatFood;
+            Item.useAnimation = 15;
+            Item.useTime = 15;
+            Item.maxStack = 30;
         }
         public override bool PreDrawTooltip(ReadOnlyCollection<TooltipLine> lines, ref int x, ref int y)
         {
@@ -44,17 +57,10 @@ namespace ExoticFruits.Items.Fruits
                 }
             }
         }
-
-        public override void SetDefaults()
-        {
-            Item.CloneDefaults(ItemID.LifeFruit);
-            Item.rare = ItemRarityID.Red;
-        }
         public override bool CanUseItem(Player player)
         {
             return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && ExoticFruitsPlayer.bigFruitsConsumed < ExoticFruits.MaxFruits;
         }
-
         public override bool? UseItem(Player player)
         {
             player.statLifeMax2 += ExoticFruits.BigFruitLifeValue;

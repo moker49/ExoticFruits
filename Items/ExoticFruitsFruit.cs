@@ -10,7 +10,15 @@ namespace ExoticFruits.Items
     {
         public override void SetDefaults()
         {
-            Item.CloneDefaults(ItemID.LifeFruit);
+            Item.width = 24;
+            Item.height = 24;
+            Item.rare = ItemRarityID.Yellow;
+            Item.consumable = true;
+            Item.UseSound = SoundID.Item4;
+            Item.useStyle = ItemUseStyleID.EatFood;
+            Item.useAnimation = 15;
+            Item.useTime = 15;
+            Item.maxStack = 30;
         }
 
         internal bool CanUseItemBase(Player player, int fruitIndex)

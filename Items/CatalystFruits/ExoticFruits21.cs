@@ -14,6 +14,18 @@ namespace ExoticFruits.Items.CatalystFruits
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
+        public override void SetDefaults()
+        {
+            Item.width = 24;
+            Item.height = 24;
+            Item.rare = ItemRarityID.Yellow;
+            Item.consumable = true;
+            Item.UseSound = SoundID.Item4;
+            Item.useStyle = ItemUseStyleID.EatFood;
+            Item.useAnimation = 15;
+            Item.useTime = 15;
+            Item.maxStack = 30;
+        }
         public override bool PreDrawTooltip(ReadOnlyCollection<TooltipLine> lines, ref int x, ref int y)
         {
             List<TooltipLine> newLines = new List<TooltipLine>(lines);
@@ -48,11 +60,6 @@ namespace ExoticFruits.Items.CatalystFruits
             }
         }
 
-        public override void SetDefaults()
-        {
-            Item.CloneDefaults(ItemID.LifeFruit);
-            Item.rare = ItemRarityID.Red;
-        }
         public override bool CanUseItem(Player player)
         {
             return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex] < ExoticFruits.MaxFruits;
