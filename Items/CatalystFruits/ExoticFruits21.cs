@@ -34,6 +34,7 @@ namespace ExoticFruits.Items.CatalystFruits
         }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
+            int consumedFruits = ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex];
             int maxFruits = ExoticFruits.MaxFruits;
             string consumedText = ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex] > maxFruits
                                   ? $" > {maxFruits}/{maxFruits}" : string.Empty;
@@ -42,11 +43,20 @@ namespace ExoticFruits.Items.CatalystFruits
             {
                 if (line.Text.Contains("<consumed>"))
                 {
-                    bool isBelowCap = ExoticFruitsPlayer.bigFruitsConsumed < maxFruits;
-                    line.OverrideColor = isBelowCap ? null : ExoticFruits.softCyan;
-                    line.IsModifier = true;
+                    if (ExoticFruits.CatalystMod == null)
+                    {
+                        line.OverrideColor = null;
+                        line.IsModifier = true;
+                        line.IsModifierBad = true;
+                        consumedText = $" > 0/{maxFruits}";
+                    }
+                    else
+                    {
+                        line.OverrideColor = consumedFruits >= maxFruits ? ExoticFruits.softCyan : null;
+                        line.IsModifier = true;
+                    }
 
-                    line.Text = line.Text.Replace("<consumed>", ExoticFruitsPlayer.catalystFruitsConsumed[catalystFruitIndex].ToString())
+                    line.Text = line.Text.Replace("<consumed>", consumedFruits.ToString())
                                          .Replace("<cap>", maxFruits.ToString()) + consumedText;
                 }
                 else if (line.Text.Contains("<lifeGain>"))

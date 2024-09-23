@@ -5,6 +5,8 @@ using Terraria.ModLoader.IO;
 using System;
 using System.Collections.Generic;
 using ExoticFruits.Items.Fruits;
+using ExoticFruits.Items.CalamityFruits;
+using ExoticFruits.Items.CatalystFruits;
 
 namespace ExoticFruits
 {
@@ -68,6 +70,65 @@ namespace ExoticFruits
             aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits10.Acquisition");
             AddMultiModConsumable(bigFruit, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.BIG, 0), () => ExoticFruits.MaxFruits, null, null, aquizition);
 
+        }
+        internal static void AddCalamityConsumables()
+        {
+            // Exotic Fruit 11
+            ModItem exoticFruit11 = ModContent.GetInstance<ExoticFruits11>();
+            LocalizedText aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits11.Acquisition");
+            AddMultiModConsumable(exoticFruit11, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 0), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 12
+            ModItem exoticFruit12 = ModContent.GetInstance<ExoticFruits12>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits12.Acquisition");
+            AddMultiModConsumable(exoticFruit12, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 1), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 13
+            ModItem exoticFruit13 = ModContent.GetInstance<ExoticFruits13>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits13.Acquisition");
+            AddMultiModConsumable(exoticFruit13, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 2), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 14
+            ModItem exoticFruit14 = ModContent.GetInstance<ExoticFruits14>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits14.Acquisition");
+            AddMultiModConsumable(exoticFruit14, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 3), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 15
+            ModItem exoticFruit15 = ModContent.GetInstance<ExoticFruits15>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits15.Acquisition");
+            AddMultiModConsumable(exoticFruit15, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 4), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 16
+            ModItem exoticFruit16 = ModContent.GetInstance<ExoticFruits16>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits16.Acquisition");
+            AddMultiModConsumable(exoticFruit16, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 5), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 17
+            ModItem exoticFruit17 = ModContent.GetInstance<ExoticFruits17>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits17.Acquisition");
+            AddMultiModConsumable(exoticFruit17, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 6), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 18
+            ModItem exoticFruit18 = ModContent.GetInstance<ExoticFruits18>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits18.Acquisition");
+            AddMultiModConsumable(exoticFruit18, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 7), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 19
+            ModItem exoticFruit19 = ModContent.GetInstance<ExoticFruits19>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits19.Acquisition");
+            AddMultiModConsumable(exoticFruit19, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 8), () => ExoticFruits.MaxFruits, null, null, aquizition);
+
+            // Exotic Fruit 20
+            ModItem exoticFruit20 = ModContent.GetInstance<ExoticFruits20>();
+            aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits20.Acquisition");
+            AddMultiModConsumable(exoticFruit20, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CALAMITY, 9), () => ExoticFruits.MaxFruits, null, null, aquizition);
+        }
+        internal static void AddCatalystConsumables()
+        {
+            // Exotic Fruit 21
+            ModItem exoticFruit21 = ModContent.GetInstance<ExoticFruits21>();
+            LocalizedText aquizition = ExoticFruits.instance.GetLocalization("Items.ExoticFruits21.Acquisition");
+            AddMultiModConsumable(exoticFruit21, () => ExoticFruitsPlayer.getFruitsConsumed(ExoticFruits.FruitType.CATALYST, 0), () => ExoticFruits.MaxFruits, null, null, aquizition);
         }
 
         private static void AddMultiModConsumable(ModItem modItem, Func<int> fruitsConsumed, Func<int> maxFruits, string difficulty, Func<bool> availability = null, LocalizedText aquizition = null)

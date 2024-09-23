@@ -33,7 +33,7 @@ namespace ExoticFruits
         private void LoadModFruitStats()
         {
             // calamity
-            if (ExoticFruits.calamityLoaded)
+            if (ExoticFruits.CalamityMod != null)
             {
                 foreach (byte calamityFruitConsumed in calamityFruitsConsumed)
                 {
@@ -43,7 +43,7 @@ namespace ExoticFruits
             }
 
             // catalyst (big fruits)
-            if (ExoticFruits.catalystLoaded)
+            if (ExoticFruits.CatalystMod != null)
             {
                 foreach (byte catalystFruitConsumed in catalystFruitsConsumed)
                 {

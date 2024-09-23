@@ -2,6 +2,7 @@ using ExoticFruits.Configs;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System;
 
 namespace ExoticFruits
 {
@@ -31,8 +32,8 @@ namespace ExoticFruits
 
         internal static Color softCyan = new Color(100, 200, 230);
 
-        internal static bool calamityLoaded = ModLoader.TryGetMod("CalamityMod", out Mod calamityMod);
-        internal static bool catalystLoaded = ModLoader.TryGetMod("CatalystMod", out Mod catalystMod);
+        internal static Mod CalamityMod;
+        internal static Mod CatalystMod;
         internal static Mod MunchiesMod;
 
         public override void Load()
@@ -46,14 +47,28 @@ namespace ExoticFruits
         }
         public override void PostSetupContent()
         {
-            // Munchie's Consumables
+            AddMunchiesSupport();
+        }
+
+        private void AddMunchiesSupport()
+        {
             if (ModLoader.TryGetMod("Munchies", out Mod munchiesMod))
             {
                 MunchiesMod = munchiesMod;
                 MunchiesModSupport.AddExoticConsumables();
             }
+
+            if (ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
+            {
+                CalamityMod = calamityMod;
+                if (MunchiesMod != null) MunchiesModSupport.AddCalamityConsumables();
+            }
+
+            if (ModLoader.TryGetMod("CatalystMod", out Mod catalystMod))
+            {
+                CatalystMod = catalystMod;
+                if (MunchiesMod != null) MunchiesModSupport.AddCatalystConsumables();
+            }
         }
-
-
     }
 }

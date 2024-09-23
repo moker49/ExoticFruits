@@ -51,7 +51,7 @@ namespace ExoticFruits.Items
             {
                 if (line.Text.Contains("<consumed>"))
                 {
-                    if (!ExoticFruits.calamityLoaded)
+                    if (ExoticFruits.CalamityMod == null)
                     {
                         line.OverrideColor = null;
                         line.IsModifier = true;
