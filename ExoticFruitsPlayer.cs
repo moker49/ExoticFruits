@@ -101,10 +101,10 @@ namespace ExoticFruits
         {
             switch (fruitType)
             {
-                case ExoticFruits.FruitType.VANILLA: return fruitsConsumed[fruitIndex];
-                case ExoticFruits.FruitType.BIG: return bigFruitsConsumed;
-                case ExoticFruits.FruitType.CALAMITY: return calamityFruitsConsumed[fruitIndex];
-                case ExoticFruits.FruitType.CATALYST: return catalystFruitsConsumed[fruitIndex];
+                case ExoticFruits.FruitType.VANILLA: return Math.Min(ExoticFruits.MaxFruits, fruitsConsumed[fruitIndex]);
+                case ExoticFruits.FruitType.BIG: return Math.Min(ExoticFruits.MaxFruits, bigFruitsConsumed);
+                case ExoticFruits.FruitType.CALAMITY: return Math.Min(ExoticFruits.MaxFruits, calamityFruitsConsumed[fruitIndex]);
+                case ExoticFruits.FruitType.CATALYST: return Math.Min(ExoticFruits.MaxFruits, catalystFruitsConsumed[fruitIndex]);
                 default: return 0;
             }
         }
