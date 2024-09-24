@@ -310,6 +310,11 @@ Mods: {
 				DisplayName: Fruit Chunk
 				Tooltip: This could be tasty.
 			}
+
+			ExoticFruitsPutridPotion: {
+				DisplayName: Poción de Fruita Podrida
+				Tooltip: ADVERTENCIA: Esta poción restablece tu progreso de consumo de frutas a cero.
+			}
 		}
 
 		Configs: {
