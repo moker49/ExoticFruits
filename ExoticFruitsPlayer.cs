@@ -8,10 +8,10 @@ namespace ExoticFruits
 {
     public class ExoticFruitsPlayer : ModPlayer
     {
-        public static byte[] fruitsConsumed = new byte[10];
-        public static byte[] calamityFruitsConsumed = new byte[10];
-        public static byte[] catalystFruitsConsumed = new byte[10];
-        public static int bigFruitsConsumed = 0;
+        public byte[] fruitsConsumed = new byte[10];
+        public byte[] calamityFruitsConsumed = new byte[10];
+        public byte[] catalystFruitsConsumed = new byte[10];
+        public int bigFruitsConsumed = 0;
 
         public override void ResetEffects()
         {
@@ -99,12 +99,13 @@ namespace ExoticFruits
 
         public static int getFruitsConsumed(ExoticFruits.FruitType fruitType, int fruitIndex)
         {
+            ExoticFruitsPlayer modPlayer = Main.LocalPlayer.GetModPlayer<ExoticFruitsPlayer>();
             switch (fruitType)
             {
-                case ExoticFruits.FruitType.VANILLA: return Math.Min(ExoticFruits.MaxFruits, fruitsConsumed[fruitIndex]);
-                case ExoticFruits.FruitType.BIG: return Math.Min(ExoticFruits.MaxFruits, bigFruitsConsumed);
-                case ExoticFruits.FruitType.CALAMITY: return Math.Min(ExoticFruits.MaxFruits, calamityFruitsConsumed[fruitIndex]);
-                case ExoticFruits.FruitType.CATALYST: return Math.Min(ExoticFruits.MaxFruits, catalystFruitsConsumed[fruitIndex]);
+                case ExoticFruits.FruitType.VANILLA: return Math.Min(ExoticFruits.MaxFruits, modPlayer.fruitsConsumed[fruitIndex]);
+                case ExoticFruits.FruitType.BIG: return Math.Min(ExoticFruits.MaxFruits, modPlayer.bigFruitsConsumed);
+                case ExoticFruits.FruitType.CALAMITY: return Math.Min(ExoticFruits.MaxFruits, modPlayer.calamityFruitsConsumed[fruitIndex]);
+                case ExoticFruits.FruitType.CATALYST: return Math.Min(ExoticFruits.MaxFruits, modPlayer.catalystFruitsConsumed[fruitIndex]);
                 default: return 0;
             }
         }

@@ -23,12 +23,14 @@ namespace ExoticFruits.Items
 
         internal bool CanUseItemBase(Player player, int fruitIndex)
         {
-            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && ExoticFruitsPlayer.fruitsConsumed[fruitIndex] < ExoticFruits.MaxFruits;
+            ExoticFruitsPlayer modPlayer = player.GetModPlayer<ExoticFruitsPlayer>();
+            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && modPlayer.fruitsConsumed[fruitIndex] < ExoticFruits.MaxFruits;
         }
         internal bool UseItemBase(Player player, int fruitIndex)
         {
+            ExoticFruitsPlayer modPlayer = player.GetModPlayer<ExoticFruitsPlayer>();
             BuffPlayer(player, ExoticFruits.LifePerFruit, ExoticFruits.ManaPerFruit);
-            ExoticFruitsPlayer.fruitsConsumed[fruitIndex]++;
+            modPlayer.fruitsConsumed[fruitIndex]++;
             return true;
         }
         internal void BuffPlayer(Player player, int lifeAmount, int manaAmount)
@@ -44,7 +46,8 @@ namespace ExoticFruits.Items
         }
         public void ModifyTooltipsFruit(int fruitIndex, List<TooltipLine> tooltips)
         {
-            int consumedFruits = ExoticFruitsPlayer.fruitsConsumed[fruitIndex];
+            ExoticFruitsPlayer modPlayer = Main.LocalPlayer.GetModPlayer<ExoticFruitsPlayer>();
+            int consumedFruits = modPlayer.fruitsConsumed[fruitIndex];
             int maxFruits = ExoticFruits.MaxFruits;
             string consumedText = consumedFruits > maxFruits ? $" > {maxFruits}/{maxFruits}" : string.Empty;
 

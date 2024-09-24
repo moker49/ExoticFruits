@@ -34,8 +34,9 @@ namespace ExoticFruits.Items.Fruits
         }
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
+            ExoticFruitsPlayer modPlayer = Main.LocalPlayer.GetModPlayer<ExoticFruitsPlayer>();
             int maxFruits = ExoticFruits.MaxFruits;
-            string consumedText = ExoticFruitsPlayer.bigFruitsConsumed > maxFruits
+            string consumedText = modPlayer.bigFruitsConsumed > maxFruits
                 ? $" > {maxFruits}/{maxFruits}"
                 : string.Empty;
 
@@ -43,8 +44,8 @@ namespace ExoticFruits.Items.Fruits
             {
                 if (line.Text.Contains("<consumed>"))
                 {
-                    line.Text = line.Text.Replace("<consumed>", ExoticFruitsPlayer.bigFruitsConsumed.ToString()).Replace("<cap>", maxFruits.ToString()) + consumedText;
-                    line.OverrideColor = ExoticFruitsPlayer.bigFruitsConsumed >= maxFruits ? ExoticFruits.softCyan : null;
+                    line.Text = line.Text.Replace("<consumed>", modPlayer.bigFruitsConsumed.ToString()).Replace("<cap>", maxFruits.ToString()) + consumedText;
+                    line.OverrideColor = modPlayer.bigFruitsConsumed >= maxFruits ? ExoticFruits.softCyan : null;
                     line.IsModifier = true;
                 }
                 else if (line.Text.Contains("<lifeGain>"))
@@ -59,10 +60,12 @@ namespace ExoticFruits.Items.Fruits
         }
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && ExoticFruitsPlayer.bigFruitsConsumed < ExoticFruits.MaxFruits;
+            ExoticFruitsPlayer modPlayer = player.GetModPlayer<ExoticFruitsPlayer>();
+            return player.statLifeMax >= ExoticFruits.LifeRequired && player.statManaMax >= ExoticFruits.ManaRequired && modPlayer.bigFruitsConsumed < ExoticFruits.MaxFruits;
         }
         public override bool? UseItem(Player player)
         {
+            ExoticFruitsPlayer modPlayer = player.GetModPlayer<ExoticFruitsPlayer>();
             player.statLifeMax2 += ExoticFruits.BigFruitLifeValue;
             player.statLife += ExoticFruits.BigFruitLifeValue;
             player.statManaMax2 += ExoticFruits.BigFruitManaValue;
@@ -71,7 +74,7 @@ namespace ExoticFruits.Items.Fruits
             {
                 player.HealEffect(ExoticFruits.BigFruitLifeValue);
             }
-            ExoticFruitsPlayer.bigFruitsConsumed++;
+            modPlayer.bigFruitsConsumed++;
             return true;
         }
 
